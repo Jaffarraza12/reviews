@@ -23,19 +23,18 @@ class ReviewsController extends Controller
         $review['avg_rating'] = $this->aggregate($filter);
         $filter['operation'] = 'c';
         $filter['vote'] = 5 ;
-        $review['5star'] = $this->aggregate($filter);
+        $review['star5'] = $this->aggregate($filter);
         $filter['vote'] = 4 ;
-        $review['4star'] = $this->aggregate($filter);
+        $review['star4'] = $this->aggregate($filter);
         $filter['vote'] = 3 ;
-        $review['3star'] = $this->aggregate($filter);
+        $review['star3'] = $this->aggregate($filter);
         $filter['vote'] = 2 ;
-        $review['2star'] = $this->aggregate($filter);
+        $review['star2'] = $this->aggregate($filter);
         $filter['vote'] = 1 ;
-        $review['1star'] = $this->aggregate($filter);
+        $review['star1'] = $this->aggregate($filter);
         $filter['recommend'] = 1;
         unset($filter['vote']);
-       // $review['r'] = 1;
-        $review['total_recommend'] = $this->aggregate($filter);
+         $review['total_recommend'] = $this->aggregate($filter);
         $review['reviews'] = $rev->orderBy('id','desc')->get();
         return response()->json($review,200);
     }

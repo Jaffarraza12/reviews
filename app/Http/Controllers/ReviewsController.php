@@ -36,7 +36,7 @@ class ReviewsController extends Controller
         unset($filter['vote']);
         $review['total_recommend'] = $this->aggregate($filter);
         $review['reviews'] = $rev->orderBy('id','desc')->get();
-        return response()->json($review,200);
+       //return response()->json($review,200);
     }
 
     public function show(Review $review)

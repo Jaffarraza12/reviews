@@ -32,10 +32,10 @@ class ReviewsController extends Controller
         $review['2star'] = $this->aggregate($filter);
         $filter['vote'] = 1 ;
         $review['1star'] = $this->aggregate($filter);
+        $filter['recommend'] = 1;
+        unset($filter['vote']);
+        $review['total_recommend'] = $this->aggregate($filter);
         $review['reviews'] = $rev->orderBy('id','desc')->get();
-
-
-
         return response()->json($review,200);
     }
 
@@ -74,6 +74,9 @@ class ReviewsController extends Controller
         }
         if (isset($filter['vote']) && $filter['vote'] <> ''  ) {
             $review->where('vote', '=', $filter['vote']);
+        }
+        if (isset($filter['recommed']) && $filter['recommed'] <> ''  ) {
+            $review->where('recommend', '=', $filter['recommed']);
         }
 
         if ($filter['operation'] == 'c') {

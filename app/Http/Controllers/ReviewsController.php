@@ -76,6 +76,7 @@ class ReviewsController extends Controller
             $review->where('vote', '=', $filter['vote']);
         }
         if (isset($filter['recommed']) && $filter['recommed'] <> ''  ) {
+            echo ':(';
             $review->where('recommend', '=', $filter['recommed']);
         }
 

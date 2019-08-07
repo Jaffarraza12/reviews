@@ -28,6 +28,7 @@ class ReviewsController extends Controller
         $review['star4'] = $this->aggregate($filter);
         $filter['vote'] = 3 ;
         $review['star3'] = $this->aggregate($filter);
+        $review['test'] = ':)';
         $filter['vote'] = 2 ;
         $review['star2'] = $this->aggregate($filter);
         $filter['vote'] = 1 ;

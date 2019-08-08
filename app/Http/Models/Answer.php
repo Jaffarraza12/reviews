@@ -10,5 +10,5 @@ class Answer extends Model
     protected $table = 'answer';
     protected $connection = 'mysql';
     protected $primaryKey = 'id';
-    protected $fillable = ['answer','name','email','question'];
+    protected $fillable = ['answer','name','email','question','product'];
 }

@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     foreach($post as $key => $val){
         $qryString .= $key.'='.$val.'&';
     }
-    //$server = 'http://localhost/reviews/';
+    //$server = 'http://localhost/reviews/';qna.LoadQuestions()
     $server = 'https://reviews.appertunity.net/';
     $url = $server.'public/api/answer';
     $ch = curl_init($url);

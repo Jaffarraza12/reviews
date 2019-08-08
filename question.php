@@ -5,8 +5,8 @@ header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
 error_reporting(4);
-$server = 'http://localhost/reviews/';
-//$server = 'https://reviews.appertunity.net/';
+//$server = 'http://localhost/reviews/';
+$server = 'https://reviews.appertunity.net/';
 $url = $server.'public/api/question';
 
 

@@ -25,3 +25,8 @@ Route::put('review/{id}', 'ReviewsController@update');
 Route::delete('review/{id}', 'ReviewsController@delete');
 
 
+
+Route::get('question', 'QuestionController@index');
+Route::post('question', 'QuestionController@store');
+Route::post('answer', 'QuestionController@Anstore');
+

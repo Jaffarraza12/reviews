@@ -30,3 +30,4 @@ Route::get('question', 'QuestionController@index');
 Route::post('question', 'QuestionController@store');
 Route::post('answer', 'QuestionController@Anstore');
 Route::post('contact', 'ContactController@store');
+Route::post('complain', 'ComplainController@store');

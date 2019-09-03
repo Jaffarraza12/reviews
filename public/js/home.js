@@ -16,6 +16,7 @@ var app = new Vue({
                     }
                 }).then(function (response) {
                     this.reviews = response.data
+                    console.log(response)
                   })
                   .catch(function (error) {
                         // handle error

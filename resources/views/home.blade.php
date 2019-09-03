@@ -30,7 +30,7 @@
 
 
             </div>
-        </div>
+
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">Recent Reviews</div>
@@ -80,6 +80,7 @@
                 </table>
             </div>
         </div>
+    </div>
     </div>
 
 </div>

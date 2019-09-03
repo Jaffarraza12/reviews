@@ -1,17 +1,21 @@
 var app = new Vue({
     el: '#app',
-    data: {},
+    data: {
+        reviews : null,
+        review_limit : 5
+    },
     methods: {
         GetReviews : function(){
             axios
                 .get('/public/api/review' , {
                     params: {
                         limit: this.product,
-                        time: Date.now()
+                        time: Date.now(),
+                        limit: this.review_limit
+
                     }
                 }).then(function (response) {
-                    alert('vue')
-                    console.log(response)
+                    this.reviews = response.data.reviews
                   })
                   .catch(function (error) {
                         // handle error

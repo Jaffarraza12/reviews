@@ -3,17 +3,6 @@
 @section('content')
 <div class="container">
     <div id="app" class="row justify-content-center">
-        <div class="col-md-2">
-            <nav style="background: #e5e5e5">
-                <ul>
-                    <li>Home</li>
-                    <li>Add Review</li>
-                    <li>List Review</li>
-                    <li>Question & Answer</li>
-                    <li>View Recommendation</li>
-                </ul>
-            </nav>
-        </div>
         <div class="col-md-10">
             <div class="card">
 
@@ -35,13 +24,20 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-                <table>
+                <table class="table">
                     <tr>
                         <th>Product</th>
                         <th>Person</th>
                         <th>Vote</th>
                         <th>Date </th>
                         <th>Publish </th>
+                    </tr>
+                    <tr v-for="r in reviews ">
+                        <th>[[r.product]]</th>
+                        <th>[[r.name]]</th>
+                        <th>[[r.vote]]</th>
+                        <th>[[r.created_at]] </th>
+                        <th><input  :checked="r.status" checked data-toggle="toggle"> </th>
                     </tr>
 
                 </table>
@@ -69,8 +65,4 @@
 
 </div>
 @endsection
-<script>
-    $(function() {
-        $('#toggle-one').bootstrapToggle();
-    })
-</script>
+

@@ -19,7 +19,7 @@ var app = new Vue({
             { isActive: false, title: 21, name: 'Larsen', product: 'Shaw' },
             { isActive: false, title: 89, name: 'Geneva', product: 'Wilson' },
             { isActive: true, title: 38, name: 'Jami', product: 'Carney' }
-        ]
+        ],
         review_limit : 5
     },
     methods: {

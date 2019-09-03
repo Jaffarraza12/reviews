@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         reviews : null,
-        review_fields: [
+        fields: [
             {
                 key: 'name',
                 label: 'Name',

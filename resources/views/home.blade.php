@@ -25,6 +25,7 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
+                [[fields]]
             <template>
                 <div>
                     <b-table striped hover :items="items" :fields="fields"></b-table>

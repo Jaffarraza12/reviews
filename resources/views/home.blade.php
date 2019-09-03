@@ -27,6 +27,7 @@
                     You are logged in!
                 </div>
             </div>
+            <div class="clearfix"></div>
             <div class="row justify-content-center">
                 <div class="card">
                     <div class="col-md-6">
@@ -34,12 +35,19 @@
                         <div class="card-body">
                             <table>
                                 <tr>
-                                    @foreach($reviews as $review)
+                                    <th>Product</th>
+                                    <th>Person</th>
+                                    <th>Vote</th>
+                                    <th>Date And Time</th>
+                                </tr>
+                                @foreach($reviews as $review)
+                                    <tr>
                                         <td>{{$review->name}}</td>
                                         <td>{{$review->message}}</td>
                                         <td>{{$review->vote}}</td>
-                                    @endforeach
-                                </tr>
+                                        <td>{{$review->created_at}}</td>
+                                    </tr>
+                                 @endforeach
                             </table>
                         </div>
                     </div>

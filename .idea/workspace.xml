@@ -28,10 +28,12 @@
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
               <folding>
+                <element signature="e#73#925#0#HTML" expanded="false" />
                 <element signature="e#122#478#0#HTML" expanded="false" />
-                <element signature="e#1147#1947#0#HTML" expanded="false" />
+                <element signature="e#930#1754#0#HTML" expanded="false" />
+                <element signature="e#1090#1709#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,15 +76,15 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="composer install" />
-      <command text="git status" />
-      <command text="git add ." />
       <command text="git status " />
       <command text="git commit -m &quot;Product Register Module.&quot;" />
       <command text="git push" />
       <command text="git status" />
       <command text="git add ." />
       <command text="git commit -m &quot;Auth Controller&quot;" />
+      <command text="git push" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;Home Controller&quot;" />
       <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Home Controller&quot;" />
@@ -405,12 +407,12 @@
       <workItem from="1565346066905" duration="386000" />
       <workItem from="1566976149480" duration="2704000" />
       <workItem from="1567178862892" duration="6002000" />
-      <workItem from="1567508350622" duration="1739000" />
+      <workItem from="1567508350622" duration="1786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95093000" />
+    <option name="totallyTimeSpent" value="95140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="0" />
@@ -840,10 +842,12 @@
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
           <folding>
+            <element signature="e#73#925#0#HTML" expanded="false" />
             <element signature="e#122#478#0#HTML" expanded="false" />
-            <element signature="e#1147#1947#0#HTML" expanded="false" />
+            <element signature="e#930#1754#0#HTML" expanded="false" />
+            <element signature="e#1090#1709#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

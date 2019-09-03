@@ -27,33 +27,34 @@
                     You are logged in!
                 </div>
             </div>
-            <div class="clearfix"></div>
-            <div class="col-md-6">
-                <div class="card">
-                        <div class="card-header">Recent Reviews</div>
-                        <div class="card-body">
-                            <table>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Person</th>
-                                    <th>Vote</th>
-                                    <th>Date And Time</th>
-                                </tr>
-                                @foreach($reviews as $review)
-                                    <tr>
-                                        <td>{{$review->name}}</td>
-                                        <td>{{$review->message}}</td>
-                                        <td>{{$review->vote}}</td>
-                                        <td>{{$review->created_at}}</td>
-                                    </tr>
-                                 @endforeach
-                            </table>
-                       </div>
-                </div>
+
+
             </div>
-            <div class="col-md-6"></div>
+        </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Recent Reviews</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Person</th>
+                        <th>Vote</th>
+                        <th>Date And Time</th>
+                    </tr>
+                    @foreach($reviews as $review)
+                        <tr>
+                            <td>{{$review->name}}</td>
+                            <td>{{$review->message}}</td>
+                            <td>{{$review->vote}}</td>
+                            <td>{{$review->created_at}}</td>
+                        </tr>
+                    @endforeach
+                </table>
             </div>
         </div>
     </div>
+    <div class="col-md-6"></div>
+
 </div>
 @endsection

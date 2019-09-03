@@ -20,4 +20,4 @@ Route::get('/', function () {
 
 Route::post('register', 'Auth\RegisterController@register');
 Route::post('login', 'Auth\LoginController@login');
-Route::get('home', 'HomeController@login');
+Route::get('home', 'HomeController@index');

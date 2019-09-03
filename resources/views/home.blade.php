@@ -33,7 +33,7 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    <tr v.for="rev in reviews">
+                    <tr v-for="rev in reviews">
                         <td>[[rev.title]]</td>
                         <td>[[rev.product]]</td>
                         <td>[[rev.vote]]</td>

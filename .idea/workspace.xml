@@ -47,8 +47,8 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -108,15 +108,15 @@
       <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Home Controller&quot;" />
-      <command text="git push" />
-      <command text="git add ." />
-      <command text="git commit -m &quot;Home Controller&quot;" />
       <command text="git add ." />
       <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Vue composer.json&quot;" />
       <command text="git push" />
       <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;Vue composer.json&quot;" />
+      <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Vue composer.json&quot;" />
       <command text="git push" />
@@ -357,12 +357,12 @@
       <workItem from="1566976149480" duration="2704000" />
       <workItem from="1567178862892" duration="6002000" />
       <workItem from="1567508350622" duration="5359000" />
-      <workItem from="1567516760238" duration="775000" />
+      <workItem from="1567516760238" duration="850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99488000" />
+    <option name="totallyTimeSpent" value="99563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="0" />
@@ -781,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
           <folding />
         </state>
       </provider>

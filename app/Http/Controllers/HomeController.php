@@ -26,8 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $reviews = Review::orderBy('id', 'desc')->limit(5)->get();
-        $questions  = Question::orderBy('id', 'desc')->limit(5)->get();
-        return view('home',compact('reviews','questions'));
+         return view('home');
     }
 }

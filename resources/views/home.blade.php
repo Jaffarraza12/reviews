@@ -16,7 +16,6 @@
         </div>
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -26,6 +25,27 @@
                     @endif
 
                     You are logged in!
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="card">
+                    <div class="col-md-6">
+                        <div class="card-header">Recent Reviews</div>
+                        <div class="card-body">
+                            <table>
+                                <tr>
+                                    @foreach($reviews as $review)
+                                        <td>{{$review->name}}</td>
+                                        <td>{{$review->message}}</td>
+                                        <td>{{$review->vote}}</td>
+                                    @endforeach
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6"></div>
+
+
                 </div>
             </div>
         </div>

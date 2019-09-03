@@ -41,6 +41,13 @@
                     </tr>
 
                 </table>
+                <p v-for="r in reviews">
+                   [[r.product]]<br/>
+                   [[r.name]]<br/>
+                   [[r.vote]]<br/>
+                   [[r.created_at]] <br/>
+                   <input  :checked="r.status"  data-toggle="toggle"> <br/>
+                </p>
             </div>
         </div>
     </div>

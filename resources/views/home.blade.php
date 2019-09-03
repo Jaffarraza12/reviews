@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div id="app" class="row justify-content-center">
         <div class="col-md-2">
             <nav style="background: #e5e5e5">
                 <ul>
@@ -82,6 +82,7 @@
         </div>
     </div>
     </div>
+
 
 </div>
 @endsection

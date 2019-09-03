@@ -32,12 +32,12 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    <tr v-for="r in reviews ">
+                    <tr v-for="r in reviews">
                         <th>[[r.product]]</th>
                         <th>[[r.name]]</th>
                         <th>[[r.vote]]</th>
                         <th>[[r.created_at]] </th>
-                        <th><input  :checked="r.status" checked data-toggle="toggle"> </th>
+                        <th><input  :checked="r.status"  data-toggle="toggle"> </th>
                     </tr>
 
                 </table>

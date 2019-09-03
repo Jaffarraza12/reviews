@@ -84,3 +84,8 @@
 
 </div>
 @endsection
+<script>
+    $(function() {
+        $('#toggle-one').bootstrapToggle();
+    })
+</script>

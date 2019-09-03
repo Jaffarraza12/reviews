@@ -25,14 +25,25 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-                [[items]]
-                [[fields]]
-                <template>
-                    <div>
-                        <b-table striped hover small :items="items" :fields="fields"></b-table>
-                    </div>
-                </template>
+                <table class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Product</th>
+                        <th>Vote</th>
+                        <th>Date </th>
+                        <th>Publish </th>
+                    </tr>
+                    <tr v.for="rev in reviews">
+                        <td>[[rev.title]]</td>
+                        <td>[[rev.product]]</td>
+                        <td>[[rev.vote]]</td>
+                        <td>[[rev.created_at]]</td>
+                        <td><input type="checkbox" checked data-toggle="toggle"></td>
+                    </tr>
+                </table>
+
             </div>
+
         </div>
     </div>
     <div class="col-md-6">

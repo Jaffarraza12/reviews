@@ -1,8 +1,8 @@
 var app = new Vue({
     el: '#app',
+    delimiters: ['[[', ']]'],
     data: {
         reviews : null,
-        delimiters: ['[[', ']]'],
         fields: [
             {
                 key: 'name',

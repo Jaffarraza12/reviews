@@ -27,8 +27,8 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
+            <state relative-caret-position="246">
+              <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -102,15 +102,15 @@
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
       <command text="git commit -m &quot;Home Controller&quot;" />
-      <command text="git push" />
-      <command text="git add ." />
-      <command text="git commit -m &quot;Home Controller&quot;" />
       <command text="git add ." />
       <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Vue composer.json&quot;" />
       <command text="git push" />
       <command text="git status" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;Vue composer.json&quot;" />
+      <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Vue composer.json&quot;" />
       <command text="git push" />
@@ -357,12 +357,12 @@
       <workItem from="1566976149480" duration="2704000" />
       <workItem from="1567178862892" duration="6002000" />
       <workItem from="1567508350622" duration="5359000" />
-      <workItem from="1567516760238" duration="1103000" />
+      <workItem from="1567516760238" duration="1159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99816000" />
+    <option name="totallyTimeSpent" value="99872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="0" />
@@ -781,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="48" column="74" lean-forward="false" selection-start-line="48" selection-start-column="74" selection-end-line="48" selection-end-column="74" />
+        <state relative-caret-position="246">
+          <caret line="43" column="19" lean-forward="false" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
           <folding />
         </state>
       </provider>

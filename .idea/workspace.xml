@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d79fd1f4-e7fd-474c-bdca-5dbc3ab0d903" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,13 +28,12 @@
       <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="73" column="62" lean-forward="false" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
               <folding>
                 <element signature="e#73#925#0#HTML" expanded="false" />
                 <element signature="e#122#478#0#HTML" expanded="false" />
-                <element signature="e#930#1754#0#HTML" expanded="false" />
-                <element signature="e#1090#1709#0#HTML" expanded="false" />
+                <element signature="e#961#1806#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,8 +42,8 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="364">
+              <caret line="30" column="55" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="55" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -76,12 +76,12 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="git status " />
-      <command text="git commit -m &quot;Product Register Module.&quot;" />
-      <command text="git push" />
       <command text="git status" />
       <command text="git add ." />
       <command text="git commit -m &quot;Auth Controller&quot;" />
+      <command text="git push" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;Home Controller&quot;" />
       <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;Home Controller&quot;" />
@@ -407,12 +407,12 @@
       <workItem from="1565346066905" duration="386000" />
       <workItem from="1566976149480" duration="2704000" />
       <workItem from="1567178862892" duration="6002000" />
-      <workItem from="1567508350622" duration="1786000" />
+      <workItem from="1567508350622" duration="2277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95140000" />
+    <option name="totallyTimeSpent" value="95631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="0" />
@@ -831,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="364">
+          <caret line="30" column="55" lean-forward="false" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="55" />
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
@@ -841,13 +841,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="73" column="62" lean-forward="false" selection-start-line="73" selection-start-column="62" selection-end-line="73" selection-end-column="62" />
           <folding>
             <element signature="e#73#925#0#HTML" expanded="false" />
             <element signature="e#122#478#0#HTML" expanded="false" />
-            <element signature="e#930#1754#0#HTML" expanded="false" />
-            <element signature="e#1090#1709#0#HTML" expanded="false" />
+            <element signature="e#961#1806#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

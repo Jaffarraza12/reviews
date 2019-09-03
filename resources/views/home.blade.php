@@ -40,21 +40,44 @@
                         <th>Product</th>
                         <th>Person</th>
                         <th>Vote</th>
-                        <th>Date And Time</th>
+                        <th>Date </th>
+                        <th>HelpFul </th>
                     </tr>
                     @foreach($reviews as $review)
                         <tr>
                             <td>{{$review->name}}</td>
                             <td>{{$review->message}}</td>
                             <td>{{$review->vote}}</td>
-                            <td>{{$review->created_at}}</td>
+                            <td>{{ date( "M D y ",strtotime($review->created_at)) }}</td>
                         </tr>
                     @endforeach
                 </table>
             </div>
         </div>
     </div>
-    <div class="col-md-6"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Recent Questions</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Question</th>
+                        <th>Vote</th>
+                        <th>Date </th>
+                    </tr>
+                    @foreach($questions as $q)
+                        <tr>
+                            <td>{{$q->name}}</td>
+                            <td>{{$q->question}}</td>
+                            <td><a>Answer This</a></td>
+                            <td>{{ date( "M D y ",strtotime($q->created_at)) }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
+        </div>
+    </div>
 
 </div>
 @endsection

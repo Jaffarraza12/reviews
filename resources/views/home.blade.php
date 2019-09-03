@@ -25,14 +25,12 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-
-            </div>
             <template>
                 <div>
                     <b-table striped hover :items="items" :fields="fields"></b-table>
                 </div>
             </template>
-
+            </div>
         </div>
     </div>
     <div class="col-md-6">

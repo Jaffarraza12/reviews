@@ -43,15 +43,7 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    @foreach($reviews as $review)
-                        <tr>
-                            <td>{{$review->name}}</td>
-                            <td>{{$review->message}}</td>
-                            <td>{{$review->vote}}</td>
-                            <td>{{ date( "M D y ",strtotime($review->created_at)) }}</td>
-                            <td><input type="checkbox" checked data-toggle="toggle"></td>
-                        </tr>
-                    @endforeach
+
                 </table>
             </div>
         </div>
@@ -68,15 +60,6 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    @foreach($questions as $q)
-                        <tr>
-                            <td>{{$q->name}}</td>
-                            <td>{{$q->question}}</td>
-                            <td><a>Answer This</a></td>
-                            <td>{{ date( "M D y ",strtotime($q->created_at)) }}</td>
-                            <td><input type="checkbox" checked data-toggle="toggle"></td>
-                        </tr>
-                    @endforeach
                 </table>
             </div>
         </div>

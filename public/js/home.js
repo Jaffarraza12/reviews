@@ -33,7 +33,7 @@ var app = new Vue({
                         limit: this.review_limit
 
                     }
-                }).then(function (response) {
+                }).then(response => {
                     app.reviews = response.data.reviews
                     console.log(response.data.reviews)
 

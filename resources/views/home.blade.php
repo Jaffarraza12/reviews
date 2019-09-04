@@ -35,12 +35,12 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    <tr v-for="rev in reviews">
-                        <td>[[rev.title]]</td>
+                    <tr v-for="rev in items">
+                        <td>[[rev.name]]</td>
                         <td>[[rev.product]]</td>
-                        <td>[[rev.vote]]</td>
-                        <td>[[rev.created_at]]</td>
-                        <td><input type="checkbox" checked data-toggle="toggle"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="checkbox"  data-toggle="toggle"></td>
                     </tr>
                 </table>
 

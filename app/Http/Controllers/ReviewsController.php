@@ -85,4 +85,10 @@ class ReviewsController extends Controller
             return $review->avg('vote');
         }
     }
+
+    public function helpfull($id){
+        Review::where('id',$id)->increment('helpfull',1);
+
+
+    }
 }

@@ -11,9 +11,9 @@ if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
         $qryString .= $key.'='.$val.'&';
     }
     if($post['help'] ==1 )
-        $url = 'https://reviews.appertunity.net/public/api/help/'.$post['id'];
+        $url = 'https://reviews.appertunity.net/public/api/review/help/'.$post['id'];
     else if ($post['help'] == 0)
-        $url = 'https://reviews.appertunity.net/public/api/no-help/'.$post['id'];
+        $url = 'https://reviews.appertunity.net/public/api/review/no-help/'.$post['id'];
 
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);

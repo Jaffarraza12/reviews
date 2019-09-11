@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d79fd1f4-e7fd-474c-bdca-5dbc3ab0d903" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ReviewsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReviewsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/review-help.php" afterPath="$PROJECT_DIR$/review-help.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +14,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReviewsController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReviewsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReviewsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="328">
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review-help.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="review-help.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/review-help.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+              <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -71,9 +71,6 @@
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
       <command text="git push" />
-      <command text="git add ." />
-      <command text="git commit -m &quot;Vue composer.json&quot;" />
-      <command text="git push" />
       <command text="git pull" />
       <command text="git status" />
       <command text="git add ." />
@@ -92,6 +89,9 @@
       <command text="git commit -m &quot;Review Helpful&quot;" />
       <command text="git push" />
       <command text="git add /" />
+      <command text="git add ." />
+      <command text="git commit -m &quot;mit&quot;" />
+      <command text="git push" />
       <command text="git add ." />
       <command text="git commit -m &quot;mit&quot;" />
       <command text="git push" />
@@ -145,8 +145,8 @@
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/public/js/home.js" />
         <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/review-help.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ReviewsController.php" />
+        <option value="$PROJECT_DIR$/review-help.php" />
       </list>
     </option>
   </component>
@@ -331,12 +331,12 @@
       <workItem from="1567615228098" duration="22000" />
       <workItem from="1567677608202" duration="868000" />
       <workItem from="1567752365513" duration="30000" />
-      <workItem from="1568186606986" duration="3223000" />
+      <workItem from="1568186606986" duration="3290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110892000" />
+    <option name="totallyTimeSpent" value="110959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1308" height="784" extended-state="0" />
@@ -741,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/review-help.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -770,6 +762,14 @@
             <element signature="e#1755#1877#0#PHP" expanded="false" />
             <element signature="e#1883#2558#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/review-help.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>

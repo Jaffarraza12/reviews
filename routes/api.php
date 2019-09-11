@@ -23,7 +23,7 @@ Route::get('review/{id}', 'ReviewsController@show');
 Route::post('review', 'ReviewsController@store');
 Route::put('review/{id}', 'ReviewsController@update');
 Route::post('review/help/{id}', 'ReviewsController@helpful');
-Route::get('review/no-help/{id}', 'ReviewsController@nohelpful');
+Route::post('review/no-help/{id}', 'ReviewsController@nohelpful');
 Route::delete('review/{id}', 'ReviewsController@delete');
 
 

@@ -6,16 +6,15 @@ error_reporting(0);
 
 if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     $post = json_decode(file_get_contents('php://input'), true);
-    echo $post['help'];
     $qryString = '';
     foreach($post as $key => $val){
         $qryString .= $key.'='.$val.'&';
     }
-    echo $post['help'];
+    if($post['help'] ==1 )
+        $url = 'https://reviews.appertunity.net/public/api/help/'.$post['id'];
+    else if ($post['help'] == 0)
+        $url = 'https://reviews.appertunity.net/public/api/no-help/'.$post['id'];
 
-
-    exit();
-    $url = 'https://reviews.appertunity.net/public/api/help/'.$post['help'];
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $qryString );

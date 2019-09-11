@@ -87,7 +87,7 @@ class ReviewsController extends Controller
     }
 
     public function helpfull($id){
-        Review::where('id',$id)->increment('helpfull',1);
+        Review::where('id',$id)->increment('helpful',1);
 
 
     }

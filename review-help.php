@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     foreach($post as $key => $val){
         $qryString .= $key.'='.$val.'&';
     }
-    echo $post['nohelp'];
+    echo $post['help'];
 
 
     exit();

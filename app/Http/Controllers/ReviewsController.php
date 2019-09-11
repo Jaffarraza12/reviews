@@ -88,8 +88,10 @@ class ReviewsController extends Controller
 
     public function helpful(Request $request){
         Review::where('id',$request->id)->increment('helpful',1);
+        return response()->json(Review::where('id',$request->id)->first(),200);
     }
     public function nohelpful(Request $request){
         Review::where('id',$request->id)->increment('nohelpful',1);
+        return response()->json(Review::where('id',$request->id)->first(),200);
     }
 }

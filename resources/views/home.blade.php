@@ -25,7 +25,7 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-                [[reviews]]
+                [[review]]
 
                 <table class="table">
                     <tr>

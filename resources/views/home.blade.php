@@ -38,7 +38,7 @@
                     <tr v-for="rev in items">
                         <td>[[rev.name]]</td>
                         <td>[[rev.product]]</td>
-                        <td></td>
+                        <td>[[rev.vote]] <i class="fa fa-star"></i></td>
                         <td></td>
                         <td><input type="checkbox"  data-toggle="toggle"></td>
                     </tr>

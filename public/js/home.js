@@ -35,7 +35,7 @@ var app = new Vue({
 
                     }
                 }).then(function (response) {
-                    this.review = response.data.reviews
+                    this.data = response.data.reviews
 
                         console.log(response.data.reviews)
 

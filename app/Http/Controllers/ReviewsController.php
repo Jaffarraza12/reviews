@@ -94,4 +94,20 @@ class ReviewsController extends Controller
         Review::where('id',$request->id)->increment('nohelpful',1);
         return response()->json(Review::where('id',$request->id)->first(),200);
     }
+
+
+    public function grid(Request $request)
+    {
+        $review = array();
+        $rev = Review::where('status',1)->in('product',$request->products);
+        foreach($rev->get()  as $r){
+            $filter = array();
+            $filter['product'] =$request->product;
+            $filter['operation'] = 'a';
+            $review[$request->product]['avg_rating'] = $this->aggregate($filter);
+            $filter['operation'] = 'c';
+            $review[$request->product]['total_reviews'] = $this->aggregate($filter);
+        }
+        return response()->json($review,200);
+    }
 }

@@ -98,7 +98,7 @@ class ReviewsController extends Controller
 
     public function grid(Request $request)
     {
-        print_r($request->product);
+        print_r($_GET['product']);
         exit();
         $review = array();
         $rev = Review::where('status',1)->whereIn('product',$request->product);

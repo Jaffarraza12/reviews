@@ -98,7 +98,7 @@ class ReviewsController extends Controller
 
     public function grid(Request $request)
     {
-        if(isset($product)) {
+        if(!isset($request->product)) {
             $review = array();
             foreach ($request->product as $product)
                 $review[$product] = array();
@@ -114,7 +114,7 @@ class ReviewsController extends Controller
             }
             return response()->json($review, 200);
         } else {
-            return response(view('errors.404'), 404);
+            abort(404);
         }
     }
 }

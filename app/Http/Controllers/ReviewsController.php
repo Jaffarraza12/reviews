@@ -98,17 +98,23 @@ class ReviewsController extends Controller
 
     public function grid(Request $request)
     {
+        if(isset($product)) {
+            $review = array();
+            foreach ($request->product as $product)
+                $review[$product] = array();
 
-        $review = array();
-        $rev = Review::where('status',1)->whereIn('product',$request->product);
-        foreach($rev->get()  as $r){
-            $filter = array();
-            $filter['product'] = $r->product;
-            $filter['operation'] = 'a';
-            $review[$r->product]['avg_rating'] = number_format($this->aggregate($filter),2);
-            $filter['operation'] = 'c';
-            $review[$r->product]['total_reviews'] = number_format($this->aggregate($filter),2);
+            $rev = Review::where('status', 1)->whereIn('product', $request->product);
+            foreach ($rev->get() as $r) {
+                $filter = array();
+                $filter['product'] = $r->product;
+                $filter['operation'] = 'a';
+                $review[$r->product]['avg_rating'] = number_format($this->aggregate($filter), 2);
+                $filter['operation'] = 'c';
+                $review[$r->product]['total_reviews'] = number_format($this->aggregate($filter), 2);
+            }
+            return response()->json($review, 200);
+        } else {
+            return response(view('errors.404'), 404);
         }
-        return response()->json($review,200);
     }
 }

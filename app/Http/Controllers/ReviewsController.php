@@ -103,7 +103,7 @@ class ReviewsController extends Controller
         $rev = Review::where('status',1)->whereIn('product',$request->product);
         foreach($rev->get()  as $r){
             $filter = array();
-            $filter['product'] =$request->product;
+            $filter['product'] = $r->product;
             $filter['operation'] = 'a';
             $review[$request->product]['avg_rating'] = $this->aggregate($filter);
             $filter['operation'] = 'c';

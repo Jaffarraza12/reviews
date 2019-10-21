@@ -7,12 +7,12 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 error_reporting(4);
 //$server = 'http://localhost/reviews/';
 $server = 'https://reviews.appertunity.net/';
-$url = $server.'public/api/grid-reviews';
+    $url = $server.'public/api/grid-reviews';
 
 
 $data = array (
         'time' => $_REQUEST['time'],
-        'product' => $_REQUEST['product']
+        'product[]' => $_REQUEST['product']
 );
 
 $params = '';

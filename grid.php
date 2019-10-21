@@ -21,6 +21,9 @@ foreach($data as $key=>$value)
 
 $params = trim($params, '&');
 
+print_r($params);
+
+exit();
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url.'?'.$params ); //Url together with parameters
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser

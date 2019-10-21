@@ -98,7 +98,7 @@ class ReviewsController extends Controller
 
     public function grid(Request $request)
     {
-        if(!isset($request->product)) {
+        if(isset($request->product)) {
             $review = array();
             foreach ($request->product as $product)
                 $review[$product] = array();

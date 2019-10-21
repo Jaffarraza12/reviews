@@ -98,7 +98,7 @@ class ReviewsController extends Controller
 
     public function grid(Request $request)
     {
-        print_r( $_GET );
+        print_r( $_GET['product']);
        echo '<Br/>';
         echo($request->time);
         exit();

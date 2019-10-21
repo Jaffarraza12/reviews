@@ -105,9 +105,9 @@ class ReviewsController extends Controller
             $filter = array();
             $filter['product'] = $r->product;
             $filter['operation'] = 'a';
-            $review[$r->product]['avg_rating'] = $this->aggregate($filter);
+            $review[$r->product]['avg_rating'] = number_format($this->aggregate($filter),2);
             $filter['operation'] = 'c';
-            $review[$r->product]['total_reviews'] = $this->aggregate($filter);
+            $review[$r->product]['total_reviews'] = number_format($this->aggregate($filter),2);
         }
         return response()->json($review,200);
     }

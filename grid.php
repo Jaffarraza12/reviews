@@ -16,9 +16,16 @@ $data = array (
 );
 
 $params = '';
-foreach($data as $key=>$value)
-    $params .= $key.'='.$value.'&';
+foreach($data as $key=>$value) {
+    if($key=='product[]'){
+        foreach($_REQUEST['product'] as $d2) {
+            $params .= 'product[]' . '=' . $d2 . '&';
+        }
+    }else {
+        $params .= $key.'='.$value.'&';
+    }
 
+}
 $params = trim($params, '&');
 
 print_r($params);

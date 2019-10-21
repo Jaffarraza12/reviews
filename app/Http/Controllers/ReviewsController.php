@@ -100,7 +100,7 @@ class ReviewsController extends Controller
     {
         print_r($request->product);
         $review = array();
-        $rev = Review::where('status',1)->in('product',$request->product);
+        $rev = Review::where('status',1)->whereIn('product',$request->product);
         foreach($rev->get()  as $r){
             $filter = array();
             $filter['product'] =$request->product;

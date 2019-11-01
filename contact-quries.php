@@ -11,9 +11,8 @@ if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     foreach($post as $key => $val){
         $qryString .= $key.'='.$val.'&';
     }
-    //$server = 'http://localhost/reviews/';
-    $server = 'https://reviews.appertunity.net/';
-    $url = $server.'public/api/contact';
+
+    $url = 'https://reviews.appertunity.net/public/api/contact';
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $qryString );

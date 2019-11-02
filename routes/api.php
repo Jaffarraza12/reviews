@@ -33,5 +33,6 @@ Route::get('question', 'QuestionController@index');
 Route::post('question', 'QuestionController@store');
 Route::post('answer', 'QuestionController@Anstore');
 Route::post('contact', 'ContactController@store');
+Route::post('warranty', 'ContactController@warranty');
 Route::post('complain', 'ComplainController@store');
 Route::post('product-register', 'ProductRegisterController@store');

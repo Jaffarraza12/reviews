@@ -12,7 +12,7 @@ if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
         $qryString .= $key.'='.$val.'&';
     }
 
-    $url = 'https://reviews.appertunity.net/public/api/review';
+    $url = 'https://reviews.appertunity.net/public/api/contact';
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $qryString );

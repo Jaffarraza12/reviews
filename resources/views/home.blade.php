@@ -39,7 +39,7 @@
                         <td>[[rev.name]]</td>
                         <td>[[rev.product]]</td>
                         <td>[[rev.vote]] <i class="fa fa-star"></i></td>
-                        <td></td>
+                        <td>[['date']]</td>
                         <td><input type="checkbox"  data-toggle="toggle"></td>
                     </tr>
                 </table>
@@ -58,7 +58,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Question</th>
-                        <th>Number of Answer/th>
+                        <th>Number of Answer</th>
                         <th>Publish </th>
                     </tr>
                 </table>

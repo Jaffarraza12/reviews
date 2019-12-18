@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     delimiters: ['[[', ']]'],
     data: {
-        review: null,
+        review: [],
         data: null,
         fields: [
             {
@@ -36,7 +36,6 @@ var app = new Vue({
                     }
                 }).then(function (response) {
                     this.data = response.data.reviews
-
                     app.review =   response.data.reviews
                     console.log(app.review)
                     console.log(app.items)

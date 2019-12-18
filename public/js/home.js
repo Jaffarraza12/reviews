@@ -54,6 +54,9 @@ var vm = new Vue({
 
     },
     mounted: function() {
+      setTimeout(function(){
       this.GetReviews();
+    },2000)
+
     }
 })

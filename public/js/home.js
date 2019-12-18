@@ -52,7 +52,7 @@ var app = new Vue({
         }
 
     },
-    created: function() {
+    mounted: function() {
         this.GetReviews();
     }
 })

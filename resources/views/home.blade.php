@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div id="app" class="row justify-content-center">
+<div  id="app" class="container">
+    <div class="row justify-content-center">
     <div class="col-md-12">
             <div class="card">
 
@@ -19,11 +19,11 @@
 
 
             </div>
+    </div>
     <br/>
-    <div class="clearfix"></div>
 
-    <div  style="margin-top:20px;">
-    <div class="col-md-6">
+    <div class="row justify-content-center">
+    <div class="col">
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col">
         <div class="card">
             <div class="card-header">Recent Questions</div>
             <div class="card-body">

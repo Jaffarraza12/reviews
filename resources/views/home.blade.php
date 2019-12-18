@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div  id="app" class="container">
+<div  id="Rapp" class="container">
     <div class="row justify-content-center">
     <div class="col">
             <div class="card">
@@ -28,6 +28,7 @@
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
               [[review]]
+              [[items]]
                 <table class="table">
                     <tr>
                         <th>Name</th>

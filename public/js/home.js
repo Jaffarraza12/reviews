@@ -38,7 +38,7 @@ var app = new Vue({
                     this.data = response.data.reviews
 
                     app.reviews =   response.data.reviews
-                    console.log(app.reviews)
+                    console.log(app.review)
                     console.log(app.items)
 
 

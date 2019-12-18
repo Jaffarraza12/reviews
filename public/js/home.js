@@ -38,6 +38,7 @@ var vm = new Vue({
                 }).then(function (response) {
                   //  this.review =   Object.assign({}, this.review, response.data.reviews)
                     vm.reviewLoading = false
+                    vm.review =  response.data.reviews
                     Vue.set({}, vm.review, response.data.reviews)
 
 
@@ -55,7 +56,29 @@ var vm = new Vue({
     },
     mounted: function() {
       setTimeout(function(){
-      this.GetReviews();
+        axios
+            .get('/public/api/review' , {
+                params: {
+                    limit: this.product,
+                    time: Date.now(),
+                    limit: this.review_limit
+
+                }
+            }).then(function (response) {
+              //  this.review =   Object.assign({}, this.review, response.data.reviews)
+                vm.reviewLoading = false
+                vm.review =  response.data.reviews
+                Vue.set({}, vm.review, response.data.reviews)
+
+
+
+              })
+              .catch(function (error) {
+                    // handle error
+                    console.log(error);
+              }).finally(function () {
+                // always executed
+               });
     },2000)
 
     }

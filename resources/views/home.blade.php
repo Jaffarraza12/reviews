@@ -27,9 +27,6 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-              [[review]]
-              [[items]]
-              [[data]]
                 <table class="table">
                     <tr>
                         <th>Name</th>

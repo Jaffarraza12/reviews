@@ -21,6 +21,8 @@
             </div>
     <br/>
     <div class="clearfix"></div>
+
+    <div class="row">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">Recent Reviews</div>
@@ -68,10 +70,10 @@
     </div>
 
 
+
 </div>
 
 
 
 <script src="{{ asset('js/home.js') }}"></script>
 @endsection
-

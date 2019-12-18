@@ -37,9 +37,8 @@ var app = new Vue({
 
                     }
                 }).then(function (response) {
-                    app.reviewLoading = false
-                    this.data = response.data.reviews
-                    app.review =   response.data.reviews
+                    this.reviewLoading = false
+                    this.review =   response.data.reviews
 
 
                   })

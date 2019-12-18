@@ -28,9 +28,6 @@
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
               [[review]]
-              [[items]]
-              [[data]]
-                <div v-if="reviewLoading">LOADING</div>
                 <table class="table">
                     <tr>
                         <th>Name</th>
@@ -39,6 +36,7 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
+                    <div v-if="reviewLoading">LOADING</div>
                     <tr v-for="rev in review">
                         <td>[[rev.name]]</td>
                         <td>[[rev.product]]</td>

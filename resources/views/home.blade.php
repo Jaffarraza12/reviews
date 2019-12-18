@@ -22,7 +22,7 @@
     <br/>
     <div class="clearfix"></div>
 
-    <div class="row">
+    <div  style="margin-top:20px;">
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">Recent Reviews</div>

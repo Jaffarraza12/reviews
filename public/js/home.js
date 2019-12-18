@@ -27,7 +27,6 @@ var app = new Vue({
     },
     methods: {
         GetReviews : function(){
-          alert(3)
             axios
                 .get('/public/api/review' , {
                     params: {
@@ -53,7 +52,27 @@ var app = new Vue({
 
     },
     mounted: function() {
-      alert('1')
-        this.GetReviews();
+      axios
+          .get('/public/api/review' , {
+              params: {
+                  limit: this.product,
+                  time: Date.now(),
+                  limit: this.review_limit
+
+              }
+          }).then(function (response) {
+              this.reviewLoading = false
+              this.review =   response.data.reviews
+
+
+            })
+            .catch(function (error) {
+                  // handle error
+                  console.log(error);
+            }).finally(function () {
+              // always executed
+             });
+
+  }
     }
 })

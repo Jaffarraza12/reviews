@@ -30,6 +30,7 @@
               [[review]]
               [[items]]
               [[data]]
+                <div v-if="reviewLoading">LOADING</div>
                 <table class="table">
                     <tr>
                         <th>Name</th>

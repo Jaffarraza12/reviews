@@ -4,6 +4,7 @@ var app = new Vue({
     data: {
         review: [],
         data: null,
+        reviewLoading: true
         fields: [
             {
                 key: 'name',
@@ -35,10 +36,9 @@ var app = new Vue({
 
                     }
                 }).then(function (response) {
+                    app.reviewLoading = false
                     this.data = response.data.reviews
                     app.review =   response.data.reviews
-                    console.log(app.review)
-                    console.log(app.items)
 
 
                   })
@@ -52,7 +52,7 @@ var app = new Vue({
         }
 
     },
-    mounted: function() {
+    created: function() {
         this.GetReviews();
     }
 })

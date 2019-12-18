@@ -1,4 +1,4 @@
-var app = new Vue({
+var vm = new Vue({
     el: '#Rapp',
     delimiters: ['[[', ']]'],
     data: {
@@ -36,8 +36,9 @@ var app = new Vue({
 
                     }
                 }).then(function (response) {
-                    this.reviewLoading = false
-                    this.review =   Object.assign({}, this.review, response.data.reviews)
+                  //  this.review =   Object.assign({}, this.review, response.data.reviews)
+                    vm.reviewLoading = false
+                    Vue.set({}, vm.review, response.data.reviews)
 
 
 

@@ -27,33 +27,32 @@ var app = new Vue({
     },
     methods: {
         GetReviews : function(){
+            axios
+                .get('/public/api/review' , {
+                    params: {
+                        limit: this.product,
+                        time: Date.now(),
+                        limit: this.review_limit
 
+                    }
+                }).then(function (response) {
+                    this.reviewLoading = false
+                    this.review =   Object.assign({}, this.review, response.data.reviews)
+
+
+
+                  })
+                  .catch(function (error) {
+                        // handle error
+                        console.log(error);
+                  }).finally(function () {
+                    // always executed
+                   });
 
         }
 
     },
     mounted: function() {
-      axios
-          .get('/public/api/review' , {
-              params: {
-                  limit: this.product,
-                  time: Date.now(),
-                  limit: this.review_limit
-
-              }
-          }).then(function (response) {
-              this.reviewLoading = false
-              this.review =   response.data.reviews
-
-
-            })
-            .catch(function (error) {
-                  // handle error
-                  console.log(error);
-            }).finally(function () {
-              // always executed
-             });
-
-  }
-
+      this.GetReviews();
+    }
 })

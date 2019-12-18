@@ -27,6 +27,7 @@ var app = new Vue({
     },
     methods: {
         GetReviews : function(){
+          alert(3)
             axios
                 .get('/public/api/review' , {
                     params: {
@@ -53,6 +54,7 @@ var app = new Vue({
 
     },
     mounted: function() {
+      alert('1')
         this.GetReviews();
     }
 })

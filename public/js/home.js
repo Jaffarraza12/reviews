@@ -4,7 +4,7 @@ var app = new Vue({
     data: {
         review: [],
         data: null,
-        reviewLoading: true
+        reviewLoading: true,
         fields: [
             {
                 key: 'name',

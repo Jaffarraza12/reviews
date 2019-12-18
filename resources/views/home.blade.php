@@ -3,7 +3,7 @@
 @section('content')
 <div  id="app" class="container">
     <div class="row justify-content-center">
-    <div class="col-md-12">
+    <div class="col">
             <div class="card">
 
                 <div class="card-body">
@@ -27,8 +27,6 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-                [[data]]
-
                 <table class="table">
                     <tr>
                         <th>Name</th>
@@ -37,7 +35,7 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    <tr v-for="rev in items">
+                    <tr v-for="rev in reviews">
                         <td>[[rev.name]]</td>
                         <td>[[rev.product]]</td>
                         <td>[[rev.vote]] <i class="fa fa-star"></i></td>
@@ -55,19 +53,18 @@
         <div class="card">
             <div class="card-header">Recent Questions</div>
             <div class="card-body">
-                <table>
+                <table class="table">
                     <tr>
                         <th>Name</th>
+                        <th>Email</th>
                         <th>Question</th>
-                        <th>Vote</th>
-                        <th>Date </th>
+                        <th>Number of Answer/th>
                         <th>Publish </th>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    <div class="clearfix"></div>
 
     </div>
 

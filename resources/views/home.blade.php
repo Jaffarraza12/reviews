@@ -79,6 +79,36 @@
     </div>
 
 
+    <div class="row justify-content-center">
+       <div class="col">
+         <div class="card">
+             <div class="card-header">Contact Us Quries</div>
+             <div class="card-body">
+               <table class="table">
+                   <tr>
+                       <th>Name</th>
+                       <th>Email </th>
+                       <th>Phone</th>
+                       <th>Publish </th>
+                   </tr>
+                   @foreach($contacts as $cont)
+                       <tr>
+                         <th>{{$cont->name}}</th>
+                         <th>{{$cont->email}} </th>
+                         <th>{{$cont->phone_number}}</th>
+                         <th>{{date('M d y',strtotime($cont->created_at))}}</th>
+                     </tr>
+                     @endforeach
+
+               </table>
+             </div>
+       </div>
+
+     </div>
+
+    </div>
+
+
 
 </div>
 

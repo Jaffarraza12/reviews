@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Models\Review;
 use App\Http\Models\Question;
 use App\Http\Models\Answer;
+use App\Http\Models\Contact;
+
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -30,6 +32,7 @@ class HomeController extends Controller
 
         $reviews = Review::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         $questions = Question::select('question.*',DB::raw('( SELECT count(*) FROM `answer` WHERE question = question.id ) as answerCount'))->orderByRaw('updated_at - created_at DESC')->get();
-        return view('home',compact('reviews','questions'));
+        $contacts= Contact::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
+        return view('home',compact('reviews','questions','contacts'));
     }
 }

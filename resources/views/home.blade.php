@@ -111,17 +111,15 @@
            <div class="card-body">
              <table class="table">
                  <tr>
-                     <th>Name</th>
+                     <th>Full Name</th>
                      <th>Email </th>
-                     <th>Phone</th>
-                     <th>Publish Date </th>
+                     <th>Purchase</th>
                  </tr>
-                 @foreach($contacts as $cont)
+                 @foreach($warranties as $warranty)
                      <tr>
-                       <th>{{$cont->name}}</th>
-                       <th>{{$cont->email}} </th>
-                       <th>{{$cont->phone_number}}</th>
-                       <th>{{date('M d y',strtotime($cont->created_at))}}</th>
+                       <th>{{$warranty->first_name .' '.$warranty->last_name}}</th>
+                       <th>{{$warranty->email}} </th>
+                       <th>{{$warranty->purchase_from}}</th>
                    </tr>
                    @endforeach
 

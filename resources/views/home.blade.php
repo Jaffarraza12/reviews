@@ -27,7 +27,6 @@
         <div class="card">
             <div class="card-header">Recent Reviews</div>
             <div class="card-body">
-              [[review]]
                 <table class="table">
                     <tr>
                         <th>Name</th>
@@ -36,14 +35,16 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    <div v-if="reviewLoading">LOADING</div>
-                    <tr v-for="rev in review">
-                        <td>[[rev.name]]</td>
-                        <td>[[rev.product]]</td>
-                        <td>[[rev.vote]] <i class="fa fa-star"></i></td>
-                        <td>[['date']]</td>
+                    @foreach ($reviews as $review)
+                    <tr >
+
+                        <td>{{rev.name}}</td>
+                        <td>{{rev.product}}</td>
+                        <td>{{rev.vote}} <i class="fa fa-star"></i></td>
+                        <td>{{{{rev.created_at}}}}</td>
                         <td><input type="checkbox"  data-toggle="toggle"></td>
                     </tr>
+                    @endforeach
                 </table>
 
             </div>

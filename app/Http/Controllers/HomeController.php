@@ -26,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-         return view('home');
+
+        $reviews = Review::->orderByRaw('updated_at - created_at DESC')->get();
+         return view('home',compact('reviews'));
     }
 }

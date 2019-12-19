@@ -23,6 +23,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/home.js') }}"></script>
+
 </head>
 <body>
     <div id="app">

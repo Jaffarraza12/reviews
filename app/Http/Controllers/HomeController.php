@@ -27,7 +27,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        $reviews = Review::->orderByRaw('updated_at - created_at DESC')->get();
-         return view('home',compact('reviews'));
+        $reviews = Review::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
+        $questions = Question::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
+
+        return view('home',compact('reviews','questions'));
     }
 }

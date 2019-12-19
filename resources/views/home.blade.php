@@ -74,9 +74,12 @@
             </div>
         </div>
     </div>
+    <div class="clearfix"></div>
 
     </div>
 
+    <div class="clearfix"></div>
+    <br/>
 
     <div class="row justify-content-center">
        <div class="col">

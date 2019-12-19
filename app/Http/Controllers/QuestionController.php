@@ -21,7 +21,7 @@ class QuestionController extends Controller
         }
         $question['questions'] = $ques->orderBy('id','desc')->get();
         foreach($question['questions']  as $q):
-            $question['answers'][$q->id] = Answer::where('question',$q->id)->get();
+            $question['answers'][$q->id] = Answer::where('question',$q->id)->where('status',1)->get();
         endforeach;
         return response()->json($question,200);
     }

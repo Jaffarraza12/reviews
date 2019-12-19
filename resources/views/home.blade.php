@@ -67,10 +67,9 @@
                           <th>{{$question->name}}</th>
                           <th>{{$question->email}} </th>
                           <th>{{$question->answerCount}}</th>
-                          <th>{{date('M d y',strtotime($question->created_at))}}</th>
+                          <th><input type="checkbox"  data-toggle="toggle"></th>
                       </tr>
                   @endforeach
-
                 </table>
             </div>
         </div>
@@ -89,7 +88,7 @@
                        <th>Name</th>
                        <th>Email </th>
                        <th>Phone</th>
-                       <th>Publish </th>
+                       <th>Publish Date </th>
                    </tr>
                    @foreach($contacts as $cont)
                        <tr>
@@ -105,6 +104,32 @@
        </div>
 
      </div>
+     <br/>
+     <div class="col">
+       <div class="card">
+           <div class="card-header">Warranty Claims</div>
+           <div class="card-body">
+             <table class="table">
+                 <tr>
+                     <th>Name</th>
+                     <th>Email </th>
+                     <th>Phone</th>
+                     <th>Publish Date </th>
+                 </tr>
+                 @foreach($contacts as $cont)
+                     <tr>
+                       <th>{{$cont->name}}</th>
+                       <th>{{$cont->email}} </th>
+                       <th>{{$cont->phone_number}}</th>
+                       <th>{{date('M d y',strtotime($cont->created_at))}}</th>
+                   </tr>
+                   @endforeach
+
+             </table>
+           </div>
+     </div>
+
+   </div>
 
     </div>
 

@@ -41,7 +41,7 @@
                         <td>{{rev.name}}</td>
                         <td>{{rev.product}}</td>
                         <td>{{rev.vote}} <i class="fa fa-star"></i></td>
-                        <td>{{{{rev.created_at}}}}</td>
+                        <td>{{rev.created_at}}</td>
                         <td><input type="checkbox"  data-toggle="toggle"></td>
                     </tr>
                     @endforeach

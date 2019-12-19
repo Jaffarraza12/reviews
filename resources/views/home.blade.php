@@ -35,13 +35,13 @@
                         <th>Date </th>
                         <th>Publish </th>
                     </tr>
-                    @foreach ($reviews as $review)
+                    @foreach ($reviews as $rev)
                     <tr >
 
-                        <td>{{rev.name}}</td>
-                        <td>{{rev.product}}</td>
-                        <td>{{rev.vote}} <i class="fa fa-star"></i></td>
-                        <td>{{rev.created_at}}</td>
+                        <td>{{$rev.name}}</td>
+                        <td>{{$rev.product}}</td>
+                        <td>{{$rev.vote}} <i class="fa fa-star"></i></td>
+                        <td>{{$rev.created_at}}</td>
                         <td><input type="checkbox"  data-toggle="toggle"></td>
                     </tr>
                     @endforeach

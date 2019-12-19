@@ -1,23 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<style>
-@media only screen and (max-width: 720px)  {
-
-  .card{
-    margin-bottom: 20px;
-  }
-
-  .table{
-    display: block;
-    overflow: hidden;
-    overflow-x: scroll;;
-  }
-
-}
-
-
-</style>
 <div  id="Rapp" class="container">
     <div class="row justify-content-center">
     <div class="col">

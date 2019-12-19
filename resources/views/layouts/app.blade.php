@@ -24,6 +24,23 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+    @media only screen and (max-width: 720px)  {
+
+      .card{
+        margin-bottom: 20px;
+      }
+
+      .table{
+        display: block;
+        overflow: hidden;
+        overflow-x: scroll;;
+      }
+
+    }
+
+
+    </style>
 
 </head>
 <body>

@@ -30,8 +30,6 @@ class HomeController extends Controller
 
         $reviews = Review::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         $questions = Question::select('question.*',DB::raw('( SELECT count(*) FROM `answer` WHERE question = question.id ) as answerCount'))->orderByRaw('updated_at - created_at DESC')->get();
-        print_r($questions);
-        exit();
         return view('home',compact('reviews','questions'));
     }
 }

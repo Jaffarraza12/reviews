@@ -37,7 +37,6 @@
                     </tr>
                     @foreach ($reviews as $rev)
                     <tr >
-
                         <td>{{$rev->name}}</td>
                         <td>{{$rev->product}}</td>
                         <td>{{$rev->vote}} <i class="fa fa-star"></i></td>
@@ -59,11 +58,19 @@
                 <table class="table">
                     <tr>
                         <th>Name</th>
-                        <th>Email</th>
-                        <th>Question</th>
+                        <th>Email </th>
                         <th>Number of Answer</th>
                         <th>Publish </th>
                     </tr>
+                    @foreach($questions as $question)
+                        <tr>
+                          <th>{{$question->name}}</th>
+                          <th>{{$question->email}} </th>
+                          <th>{{$question->answerCount}}</th>
+                          <th>{{date('M d y',strtotime($question->created_at))}}</th>
+                      </tr>
+                  @endforeach
+
                 </table>
             </div>
         </div>

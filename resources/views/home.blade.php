@@ -113,7 +113,7 @@
                  <tr>
                      <th>Full Name</th>
                      <th>Email </th>
-                     <th>Purchase</th>
+                     <th>Purchase From</th>
                  </tr>
                  @foreach($warranties as $warranty)
                      <tr>

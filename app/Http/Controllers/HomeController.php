@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Models\Review;
 use App\Http\Models\Question;
 use App\Http\Models\Answer;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {

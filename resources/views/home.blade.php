@@ -193,6 +193,40 @@
 
         </div>
 
+        <div class="clearfix"></div>
+        <br/>
+
+        <div class="row justify-content-center">
+           <div class="col">
+             <div class="card">
+                 <div class="card-header">Product Registration</div>
+                 <div class="card-body">
+                   <table class="table">
+                       <tr>
+                           <th> Name</th>
+                           <th>Email</th>
+                           <th>Product</th>
+                           <th>Price</th>
+                       </tr>
+                       @foreach($products as $product)
+                           <tr>
+                             <th>{{$product->name }}</th>
+                             <th>{{$product->email}} </th>
+                             <th>{{$product->model}}</th>
+                             <th>{{$product->price}}</th>
+                         </tr>
+                         @endforeach
+
+                   </table>
+                 </div>
+               </div>
+
+
+           </div>
+        </div>
+
+
+
 
 
 </div>

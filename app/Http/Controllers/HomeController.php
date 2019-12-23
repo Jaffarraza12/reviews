@@ -10,6 +10,7 @@ use App\Http\Models\Contact;
 use App\Http\Models\Complain;
 use App\Http\Models\Warranty;
 use App\Http\Models\Retailer;
+use App\Http\Models\Product;
 
 use Illuminate\Support\Facades\DB;
 
@@ -39,6 +40,7 @@ class HomeController extends Controller
         $warranties = Warranty::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         $complains =  Complain::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         $retailer = Retailer::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
-        return view('home',compact('reviews','questions','contacts','warranties','complains','retailer'));
+        $products = Product::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
+        return view('home',compact('reviews','questions','contacts','warranties','complains','retailer','products'));
     }
 }

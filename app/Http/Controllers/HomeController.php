@@ -40,7 +40,7 @@ class HomeController extends Controller
         $warranties = Warranty::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         $complains =  Complain::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         $retailer = Retailer::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
-        $products = Product::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
+        $products = ProductRegister::orderByRaw('updated_at - created_at DESC')->limit(5)->get();
         return view('home',compact('reviews','questions','contacts','warranties','complains','retailer','products'));
     }
 }

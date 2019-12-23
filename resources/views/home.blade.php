@@ -172,7 +172,7 @@
                           <th>Phone</th>
                           <th>Email</th>
                       </tr>
-                      @foreach($retailers as $ret)
+                      @foreach($retailer as $ret)
                           <tr>
                             <th>{{$ret->company }}</th>
                             <th>{{$ret->name }} </th>

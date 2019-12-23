@@ -135,6 +135,64 @@
     </div>
 
 
+        <div class="clearfix"></div>
+        <br/>
+
+        <div class="row justify-content-center">
+
+          <div class="col">
+            <div class="card">
+                <div class="card-header">Complain Box</div>
+                <div class="card-body">
+                  <table class="table">
+                      <tr>
+                          <th>Full Name</th>
+                          <th>Order Date</th>
+                          <th>Type</th>
+                      </tr>
+                      @foreach($complains as $complain)
+                          <tr>
+                            <th>{{$complain->name }}</th>
+                            <th>{{$complain->order}} </th>
+                            <th>{{$complain->type}}</th>
+                        </tr>
+                        @endforeach
+
+                  </table>
+                </div>
+              </div>
+          <div class="col">
+            <div class="card">
+                <div class="card-header">Retailer Quries</div>
+                <div class="card-body">
+                  <table class="table">
+                      <tr>
+                          <th>Company</th>
+                          <th>Name</th>
+                          <th>Phone</th>
+                          <th>Email</th>
+                      </tr>
+                      @foreach($retailers as $ret)
+                          <tr>
+                            <th>{{$ret->company }}</th>
+                            <th>{{$ret->name }} </th>
+                            <th>{{$ret->phone }} </th>
+                            <th>{{$ret->email }} </th>
+                        </tr>
+                      @endforeach
+
+                  </table>
+                </div>
+              </div>
+
+
+          </div>
+
+
+
+        </div>
+
+
 
 </div>
 

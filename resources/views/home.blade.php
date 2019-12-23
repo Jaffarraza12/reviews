@@ -43,7 +43,8 @@
                         <td>{{$rev->product}}</td>
                         <td>{{$rev->vote}} <i class="fa fa-star"></i></td>
                         <td>{{date('M d y',strtotime($rev->created_at))}}</td>
-                        <td><input type="checkbox"  data-toggle="toggle">  <a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                        <td><input type="checkbox"  data-toggle="toggle">  </td>
+                        <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
                     </tr>
                     @endforeach
                 </table>

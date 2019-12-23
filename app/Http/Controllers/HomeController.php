@@ -10,7 +10,7 @@ use App\Http\Models\Contact;
 use App\Http\Models\Complain;
 use App\Http\Models\Warranty;
 use App\Http\Models\Retailer;
-use App\Http\Models\Product;
+use App\Http\Models\ProductRegister;
 
 use Illuminate\Support\Facades\DB;
 

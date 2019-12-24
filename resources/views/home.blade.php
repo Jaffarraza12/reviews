@@ -155,7 +155,7 @@
                       </tr>
                       @foreach($complains as $complain)
                           <tr>
-                            <th>{{$complain->name }}</th>
+                            <th>{{$complain->compay_name }}</th>
                             <th>{{$complain->order}} </th>
                             <th>{{$complain->type}}</th>
                         </tr>
@@ -178,9 +178,9 @@
                       </tr>
                       @foreach($retailer as $ret)
                           <tr>
-                            <th>{{$ret->company }}</th>
+                            <th>{{$ret->company_name }}</th>
                             <th>{{$ret->name }} </th>
-                            <th>{{$ret->phone }} </th>
+                            <th>{{$ret->phone_number }} </th>
                             <th>{{$ret->email }} </th>
                         </tr>
                       @endforeach

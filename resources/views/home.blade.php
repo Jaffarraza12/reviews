@@ -166,7 +166,7 @@
                       </tr>
                       @foreach($complains as $complain)
                           <tr>
-                            <td>{{$complain->compay_name }}</td>
+                            <td>{{$complain->name }}</td>
                             <td>{{$complain->order}} </td>
                             <td>{{$complain->type}}</td>
                             <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>

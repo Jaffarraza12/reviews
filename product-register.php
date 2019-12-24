@@ -7,6 +7,10 @@ error_reporting(0);
 if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     $post = json_decode(file_get_contents('php://input'), true);
 
+    if($post['date']){
+      $post['date'] = date('Y-m-d h:i:s',strtotime($post['date']));
+    }
+
     $qryString = '';
     foreach($post as $key => $val){
         $qryString .= $key.'='.$val.'&';

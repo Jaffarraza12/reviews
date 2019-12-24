@@ -64,13 +64,16 @@
                         <th>Email </th>
                         <th>Number of Answer</th>
                         <th>Publish </th>
+                        <th></th>
                     </tr>
                     @foreach($questions as $question)
                         <tr>
-                          <th>{{$question->name}}</th>
-                          <th>{{$question->email}} </th>
-                          <th>{{$question->answerCount}}</th>
-                          <th><input type="checkbox"  data-toggle="toggle"></th>
+                          <td>{{$question->name}}</td>
+                          <td>{{$question->email}} </td>
+                          <td>{{$question->answerCount}}</td>
+                          <td><input type="checkbox"  data-toggle="toggle"></td>
+                          <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+
                       </tr>
                   @endforeach
                 </table>
@@ -95,13 +98,16 @@
                        <th>Email </th>
                        <th>Phone</th>
                        <th>Publish Date </th>
+                       <th> </th>
                    </tr>
                    @foreach($contacts as $cont)
                        <tr>
-                         <th>{{$cont->name}}</th>
-                         <th>{{$cont->email}} </th>
-                         <th>{{$cont->phone_number}}</th>
-                         <th>{{date('M d y',strtotime($cont->created_at))}}</th>
+                         <td>{{$cont->name}}</th>
+                         <td>{{$cont->email}} </td>
+                         <td>{{$cont->phone_number}}</td>
+                         <td>{{date('M d y',strtotime($cont->created_at))}}</td>
+                         <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+
                      </tr>
                      @endforeach
 
@@ -120,12 +126,16 @@
                      <th>Full Name</th>
                      <th>Email </th>
                      <th>Purchase From</th>
+                     <th></th>
                  </tr>
+
                  @foreach($warranties as $warranty)
                      <tr>
-                       <th>{{$warranty->first_name .' '.$warranty->last_name}}</th>
-                       <th>{{$warranty->email}} </th>
-                       <th>{{$warranty->purchase_from}}</th>
+                       <td>{{$warranty->first_name .' '.$warranty->last_name}}</td>
+                       <td>{{$warranty->email}} </td>
+                       <td>{{$warranty->purchase_from}}</td>
+                       <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+
                    </tr>
                    @endforeach
 
@@ -152,12 +162,15 @@
                           <th>Full Name</th>
                           <th>Order Date</th>
                           <th>Type</th>
+                          <th></th>
                       </tr>
                       @foreach($complains as $complain)
                           <tr>
-                            <th>{{$complain->compay_name }}</th>
-                            <th>{{$complain->order}} </th>
-                            <th>{{$complain->type}}</th>
+                            <td>{{$complain->compay_name }}</td>
+                            <td>{{$complain->order}} </td>
+                            <td>{{$complain->type}}</td>
+                            <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+
                         </tr>
                         @endforeach
 
@@ -178,10 +191,10 @@
                       </tr>
                       @foreach($retailer as $ret)
                           <tr>
-                            <th>{{$ret->company_name }}</th>
-                            <th>{{$ret->name }} </th>
-                            <th>{{$ret->phone_number }} </th>
-                            <th>{{$ret->email }} </th>
+                            <td>{{$ret->company_name }}</td>
+                            <td>{{$ret->name }} </td>
+                            <td>{{$ret->phone_number }} </td>
+                            <td>{{$ret->email }} </td>
                         </tr>
                       @endforeach
 
@@ -210,14 +223,16 @@
                            <th>Email</th>
                            <th>Product</th>
                            <th>Price</th>
+                           <th></th>
                        </tr>
                        @foreach($products as $product)
                            <tr>
-                             <th>{{$product->name }}</th>
-                             <th>{{$product->email}} </th>
-                             <th>{{$product->model}}</th>
-                             <th>{{$product->price}}</th>
-                         </tr>
+                             <td>{{$product->name }}</td>
+                             <td>{{$product->email}} </td>
+                             <td>{{$product->model}}</td>
+                             <td>{{$product->price}}</td>
+                             <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                          </tr>
                          @endforeach
 
                    </table>

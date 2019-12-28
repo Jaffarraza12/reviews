@@ -277,7 +277,7 @@
 $(document).ready(function(){
   alert('asd')
   $('#review-status').change(function(){
-    alert($(this).val())
+    alert('asd')
   })
 })
 

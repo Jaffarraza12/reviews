@@ -276,7 +276,7 @@
 <script>
 $(document).ready(function(){
   alert('asd')
-  $('#review-status').change(function(){
+  $('#review-117').change(function(){
     alert('asd')
   })
 })

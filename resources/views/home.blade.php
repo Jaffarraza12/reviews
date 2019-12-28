@@ -258,7 +258,10 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+          <div class="row">
+              <div class="col-md-3">Title</div>
+              <div class="col-md-9">Reinhold Schuppe</div>
+          </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -42,12 +42,7 @@
 
     </style>
     <script>
-    $(document).ready(function(){
-      $('#review-117').change(function(){
-        alert('asd')
-      })
-    })
-
+  
 
     </script>
 </head>

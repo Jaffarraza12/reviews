@@ -286,6 +286,8 @@ function ChangeStatus(type,id,elem){
   $.ajax({
   url: path,
   method: "POST",
+  contentType: "application/json; charset=utf-8",
+  dataType: "json",
   data: { 'status': sta,'id':id }
 }).done(function() {
   $( this ).addClass( "done" );

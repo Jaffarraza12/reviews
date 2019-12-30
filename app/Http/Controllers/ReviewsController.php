@@ -58,7 +58,7 @@ class ReviewsController extends Controller
           'status' => $request->status,
           'id' => $request->id );
 
-        $review->update($req);
+        $review->where('id',$request->id )->update($req);
 
         return response()->json($review, 200);
     }

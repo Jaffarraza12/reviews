@@ -48,7 +48,12 @@
                     </tr>
                     @endforeach
                 </table>
-<input id="toggle-one" checked type="checkbox">
+                <div class="checkbox">
+                  <label>
+                    <input id="toggle-one" type="checkbox" data-toggle="toggle">
+                    Option one is enabled
+                  </label>
+                </div>
             </div>
 
         </div>
@@ -272,14 +277,6 @@
 </div>
 
 
-
-<script>
-$(document).ready(function(){
-$('#review-117').bootstrapToggle();
-})
-
-
-</script>
 <script>
   $(function() {
     $('#toggle-one').bootstrapToggle();

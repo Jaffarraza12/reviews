@@ -54,6 +54,8 @@ class ReviewsController extends Controller
 
     public function update(Request $request, Review $review)
     {
+      echo $request->status;
+      exit();
         $review->update($request->all());
 
         return response()->json($review, 200);

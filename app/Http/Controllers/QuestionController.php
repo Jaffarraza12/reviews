@@ -43,4 +43,49 @@ class QuestionController extends Controller
 
         return response()->json($review, 200);
     }
+    public function HTMLBLOCK(Request $request){
+      $html = '';
+      $status = '';
+      $question = Question::where('id',$request->id)->first();
+      $answers = Answer::where('question',$request->id)->get();
+      if($review->staus) {
+        $status= 'Active';
+      } else {
+        $status= 'Non active';
+      }
+      $html .= '<div class="row">
+          <div class="col-md-3">Name</div>
+          <div class="col-md-9">'.$question->name.'</div>
+      </div><div class="row">
+          <div class="col-md-3">Email</div>
+          <div class="col-md-9">'.$question->email.'</div>
+      </div><div class="row">
+          <div class="col-md-3">Question</div>
+          <div class="col-md-9">'.$question->question.'</div>
+      </div>';
+      if(sizeof($answers) > 0){
+        $html .= "<div style='background:#b0b0b0'> ";
+          foreach($answers as $ans){
+            $html .= '<div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">'.$ans->answer.'</div>
+            </div>';
+          }
+        $html .= '</div>';
+      }
+      $html .= '<div class="row">
+          <div class="col-md-3">Created at</div>
+          <div class="col-md-9">'.date('d M Y',strtotime($review->created_at)).'</div>
+          </div><div class="row">
+              <div class="col-md-3">status</div>
+              <div class="col-md-9">'.$status.'</div>
+          </div>';
+
+      $json['html'] =  $html;
+      echo json_encode($json);
+
+    }
+
+
+
 }

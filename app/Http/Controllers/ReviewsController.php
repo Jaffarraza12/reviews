@@ -54,10 +54,11 @@ class ReviewsController extends Controller
 
     public function update(Request $request, Review $review)
     {
-      echo $request->status;
-      print_r($request->all());
-      exit();
-        $review->update($request->all());
+        $req = array(
+          'status' => $request->status,
+          'id' => $request->id );
+
+        $review->update($req);
 
         return response()->json($review, 200);
     }

@@ -43,21 +43,15 @@
                         <td>{{$rev->product}}</td>
                         <td>{{$rev->vote}} <i class="fa fa-star"></i></td>
                         <td>{{date('M d y',strtotime($rev->created_at))}}</td>
-                        <td><input id="review-{{$rev->id}}" type="checkbox"  />  </td>
+                        <td><label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                          </label></td>
                         <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
                     </tr>
                     @endforeach
                 </table>
-                <input id="toggle-event" type="checkbox" data-toggle="toggle">
-        <div id="console-event"></div>
-        <script>
-          $(function() {
-            alert('asd')
-            $('#toggle-event').change(function() {
-              $('#console-event').html('Toggle: ' + $(this).prop('checked'))
-            })
-          })
-        </script>
+
             </div>
 
         </div>
@@ -80,7 +74,11 @@
                           <td>{{$question->name}}</td>
                           <td>{{$question->email}} </td>
                           <td>{{$question->answerCount}}</td>
-                          <td></td>
+                          <td><label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+</td>
                           <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
 
                       </tr>

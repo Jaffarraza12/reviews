@@ -277,14 +277,16 @@
 
 <script>
 function ChangeStatus(type,id,elem){
-  if($(elem).is(':checked')){alert(1)} else {alert(0)}
+  sta= 0
+  path = ''
+  if($(elem).is(':checked')){sta =1} else {sta =0}
   if(type=='review'){
     path = "/public/api/review/"+id
   }
   $.ajax({
   url: path,
   method: "POST",
-  data: { status: 1 }
+  data: { 'status': sta,'id':id }
 }).done(function() {
   $( this ).addClass( "done" );
 });

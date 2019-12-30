@@ -52,6 +52,7 @@
         <div id="console-event"></div>
         <script>
           $(function() {
+            alert('asd')
             $('#toggle-event').change(function() {
               $('#console-event').html('Toggle: ' + $(this).prop('checked'))
             })
@@ -280,13 +281,7 @@
 </div>
 
 
-<script>
-$(function() {
-    $('#toggle-one').change(function() {
-        alert('s')
-    })
-  })
-</script>
+
 
 
 @endsection

@@ -299,7 +299,7 @@ function ViewPop(type,id,elem){
   path = ''
   if(type=='review'){
     path = "/public/review/html/"+id
-  } elseif(type=='question'){
+  } else if(type=='question'){
     path = "/public/question/html/"+id
   }
    $.ajax({

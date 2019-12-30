@@ -75,7 +75,7 @@ class QuestionController extends Controller
       }
       $html .= '<div class="row">
           <div class="col-md-3">Created at</div>
-          <div class="col-md-9">'.date('d M Y',strtotime($review->created_at)).'</div>
+          <div class="col-md-9">'.date('d M Y',strtotime($question->created_at)).'</div>
           </div><div class="row">
               <div class="col-md-3">status</div>
               <div class="col-md-9">'.$status.'</div>

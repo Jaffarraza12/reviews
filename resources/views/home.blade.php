@@ -48,7 +48,7 @@
                     </tr>
                     @endforeach
                 </table>
-
+<input id="toggle-one" checked type="checkbox">
             </div>
 
         </div>

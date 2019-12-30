@@ -280,6 +280,11 @@ $('#review-117').bootstrapToggle();
 
 
 </script>
+<script>
+  $(function() {
+    $('#toggle-one').bootstrapToggle();
+  })
+</script>
 
 
 @endsection

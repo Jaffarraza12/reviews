@@ -279,7 +279,7 @@
 
 <script>
 $(function() {
-    $('#toggle-event').change(function() {
+    $('#toggle-one').change(function() {
         alert('s')
     })
   })

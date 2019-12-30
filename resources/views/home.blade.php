@@ -285,7 +285,6 @@ function ChangeStatus(type,id,elem){
   url: path,
   method: "POST",
   data: { status: 1 }
-  context: document.body
 }).done(function() {
   $( this ).addClass( "done" );
 });

@@ -277,7 +277,7 @@
 
 <script>
 function ChangeStatus(type,id,elem){
-  if(elem:checked){alert(1)} else {alert(0)}
+  if(elem.is(checked){alert(1)} else {alert(0)}
   if(type=='review'){
     path = "/public/api/review/"+id
   }

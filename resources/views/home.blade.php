@@ -278,8 +278,10 @@
 
 
 <script>
-  $(function() {
-    $('#toggle-one').bootstrapToggle();
+$(function() {
+    $('#toggle-event').change(function() {
+        alert('s')
+    })
   })
 </script>
 

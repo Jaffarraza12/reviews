@@ -74,11 +74,7 @@
                           <td>{{$question->name}}</td>
                           <td>{{$question->email}} </td>
                           <td>{{$question->answerCount}}</td>
-                          <td><label class="switch">
-  <input type="checkbox" checked>
-  <span class="slider round"></span>
-</label>
-</td>
+                          <td></td>
                           <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
 
                       </tr>

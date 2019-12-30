@@ -65,7 +65,7 @@ class QuestionController extends Controller
       </div>';
       if(sizeof($answers) > 0){
         $html .= "<div >
-          <h3 style="text-align:center;">ANSWERS </h3>";
+          <h3 style='text-align:center;'>ANSWERS </h3>";
           foreach($answers as $ans){
             $html .= '<div class="row" style='background:#b0b0b0;margin:10px 0;'>
                 <div class="col-md-3"></div>

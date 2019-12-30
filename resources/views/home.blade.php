@@ -44,7 +44,7 @@
                         <td>{{$rev->vote}} <i class="fa fa-star"></i></td>
                         <td>{{date('M d y',strtotime($rev->created_at))}}</td>
                         <td><label class="switch">
-                            <input onclick="ChangeStatus('review',{{$rev->id}},this)" type="checkbox" @if(!$rev->status ) checked @endif />
+                            <input onclick="ChangeStatus('review',{{$rev->id}},this)" type="checkbox" @if($rev->status ) checked @endif />
                             <span class="slider round"></span>
                           </label></td>
                         <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
@@ -286,7 +286,7 @@ function ChangeStatus(type,id,elem){
   $.ajax({
   url: path,
   method: "POST",
-  data: { 'status': sta,'id':id,'methods':'PUT' }
+  data: { 'status': sta,'id':id,'_method':'PUT' }
 }).done(function() {
   $( this ).addClass( "done" );
 });

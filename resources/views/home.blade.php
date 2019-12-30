@@ -308,6 +308,7 @@ function ViewPop(type,id,elem){
  }).done(function(resp) {
    rep = $.parseJSON(resp)
    $('.modal-body').html(rep.html)
+   $('#exampleModalLabel').html(type.toUpperCase())
    $('#viewReview').modal('show')
 
  })

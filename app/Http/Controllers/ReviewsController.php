@@ -162,13 +162,13 @@ class ReviewsController extends Controller
                   <div class="col-md-9">'.$status.'<icon class="fa fa-star"></i></div>
                   </div><div class="row">
                       <div class="col-md-3">Helpful</div>
-                      <div class="col-md-9">'.$review->helpful.'<icon class="fa fa-star"></i></div>
+                      <div class="col-md-9">'.$review->helpful.'</div>
                       </div><div class="row">
                           <div class="col-md-3">Non Helpful</div>
-                          <div class="col-md-9">'.$review->nohelpful.'<icon class="fa fa-star"></i></div>
+                          <div class="col-md-9">'.$review->nohelpful.'</div>
                           </div><div class="row">
                               <div class="col-md-3">Created at</div>
-                              <div class="col-md-9">'.date('d M f',strtotime($review->created_at)).'<icon class="fa fa-star"></i></div>
+                              <div class="col-md-9">'.date('d M Y',strtotime($review->created_at)).'</div>
                               </div>';
 
             $json['html'] =  $html;

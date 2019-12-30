@@ -130,7 +130,7 @@ class ReviewsController extends Controller
       } else {
         $status= 'Non active';
       }
-      html .= '<div class="row">
+      $html .= '<div class="row">
           <div class="col-md-3">Title</div>
           <div class="col-md-9">'.$review->title.'</div>
       </div><div class="row">
@@ -172,7 +172,7 @@ class ReviewsController extends Controller
                               </div>';
 
             $json['html'] =  $html;
-            echo json_encode($json);                   
+            echo json_encode($json);
 
 
 

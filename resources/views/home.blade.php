@@ -48,12 +48,15 @@
                     </tr>
                     @endforeach
                 </table>
-                <div class="checkbox">
-                  <label>
-                    <input id="toggle-one" type="checkbox" data-toggle="toggle">
-                    Option one is enabled
-                  </label>
-                </div>
+                <input id="toggle-event" type="checkbox" data-toggle="toggle">
+  <div id="console-event"></div>
+  <script>
+    $(function() {
+      $('#toggle-event').change(function() {
+        $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+      })
+    })
+  </script>
             </div>
 
         </div>

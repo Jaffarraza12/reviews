@@ -48,7 +48,7 @@ class QuestionController extends Controller
       $status = '';
       $question = Question::where('id',$request->id)->first();
       $answers = Answer::where('question',$request->id)->get();
-      if($review->staus) {
+      if($question->staus) {
         $status= 'Active';
       } else {
         $status= 'Non active';

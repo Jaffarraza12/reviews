@@ -47,7 +47,7 @@
                             <input onclick="ChangeStatus('review',{{$rev->id}},this)" type="checkbox" @if($rev->status ) checked @endif />
                             <span class="slider round"></span>
                           </label></td>
-                        <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                        <td><a class="pointer" title="View Review" onclick="ChangeStatus('review',{{$question->id}},this)"><i class="fa fa-search"></i></a></td>
                     </tr>
                     @endforeach
                 </table>

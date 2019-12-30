@@ -300,7 +300,7 @@ function ViewPop(type,id,elem){
   if(type=='review'){
     path = "/public/review/html/"+id
   } elseif(type=='question'){
-
+    path = "/public/question/html/"+id
   }
    $.ajax({
    url: path,

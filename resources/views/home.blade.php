@@ -284,7 +284,7 @@ function ChangeStatus(type,id,elem){
   $.ajax({
   url: path,
   method: "POST",
-  data: { status: , location: "Boston" }
+  data: { status: 1 }
   context: document.body
 }).done(function() {
   $( this ).addClass( "done" );

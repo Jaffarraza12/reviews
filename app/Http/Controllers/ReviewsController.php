@@ -55,8 +55,7 @@ class ReviewsController extends Controller
     public function update(Request $request, Review $review)
     {
         $req = array(
-          'status' => $request->status,
-          'id' => $request->id );
+          'status' => $request->status);
 
         $review->where('id',$request->id )->update($req);
 

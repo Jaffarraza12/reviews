@@ -74,7 +74,10 @@
                           <td>{{$question->name}}</td>
                           <td>{{$question->email}} </td>
                           <td>{{$question->answerCount}}</td>
-                          <td></td>
+                          <td><label class="switch">
+                              <input onclick="ChangeStatus('question',{{$question->id}},this)" type="checkbox" @if($question->status ) checked @endif />
+                              <span class="slider round"></span>
+                            </label></td>
                           <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
 
                       </tr>
@@ -282,6 +285,8 @@ function ChangeStatus(type,id,elem){
   if($(elem).is(':checked')){sta =1} else {sta =0}
   if(type=='review'){
     path = "/public/api/review/"+id
+  } else if(type=='question'){
+    path = "/public/api/question/"+id
   }
   $.ajax({
   url: path,

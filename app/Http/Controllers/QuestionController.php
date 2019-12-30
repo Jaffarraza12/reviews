@@ -35,4 +35,12 @@ class QuestionController extends Controller
         $question = Answer::create($request->all());
         return response()->json($question, 200);
     }
+    public function update(Request $request)
+    {
+        $req = array(      'status' => $request->status);
+
+        Question::where('id',$request->id )->update($req);
+
+        return response()->json($review, 200);
+    }
 }

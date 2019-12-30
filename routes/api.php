@@ -26,6 +26,7 @@ Route::post('review/help/{id}', 'ReviewsController@helpful');
 Route::post('review/no-help/{id}', 'ReviewsController@nohelpful');
 Route::delete('review/{id}', 'ReviewsController@delete');
 Route::get('grid-reviews', 'ReviewsController@grid');
+Route::put('question/{id}', 'QuestionController@update');
 
 
 

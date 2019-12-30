@@ -44,7 +44,7 @@
                         <td>{{$rev->vote}} <i class="fa fa-star"></i></td>
                         <td>{{date('M d y',strtotime($rev->created_at))}}</td>
                         <td><label class="switch">
-                            <input type="checkbox" @if($rev->status) checked @endif />
+                            <input type="checkbox" @if(!$rev->status ) checked @endif />
                             <span class="slider round"></span>
                           </label></td>
                         <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>

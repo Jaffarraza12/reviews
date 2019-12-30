@@ -78,7 +78,7 @@
                               <input onclick="ChangeStatus('question',{{$question->id}},this)" type="checkbox" @if($question->status ) checked @endif />
                               <span class="slider round"></span>
                             </label></td>
-                          <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                          <td><a class="pointer" title="View Review" onclick="ViewPop('question',{{$question->id}},this)"><i class="fa fa-search"></i></a></td>
 
                       </tr>
                   @endforeach

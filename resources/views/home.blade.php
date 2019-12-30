@@ -310,7 +310,7 @@ function ViewPop(type,id,elem){
    $('.modal-body').html(rep.html)
    $('#viewReview').modal('show')
 
- }
+ })
 
 
 }

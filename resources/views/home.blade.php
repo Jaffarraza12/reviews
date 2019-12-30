@@ -264,10 +264,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <div class="row">
-              <div class="col-md-3">Title</div>
-              <div class="col-md-9">Reinhold Schuppe</div>
-          </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -295,6 +292,25 @@ function ChangeStatus(type,id,elem){
 }).done(function() {
   $( this ).addClass( "done" );
 });
+
+
+}
+
+function ViewPop(type,id,elem){
+  path = ''
+  if(type=='review'){
+    path = "/public/review/html/"+id
+   }
+   $.ajax({
+   url: path,
+   method: "GET",
+   data: { 'id':id,'_method':'GET' }
+ }).done(function(resp) {
+   rep = $.parseJSON(resp)
+   $('.modal-body').html(rep.html)
+   $('#viewReview').modal('show')
+
+ }
 
 
 }

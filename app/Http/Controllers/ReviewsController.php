@@ -121,7 +121,61 @@ class ReviewsController extends Controller
         }
     }
 
-    public function HTMLBLOCK(){
+    public function HTMLBLOCK(Request $request){
+      $html = '';
+      $status = '';
+      $review = Review::where('id',$request->id)->first();
+      if($review->staus) {
+        $status= 'Active';
+      } else {
+        $status= 'Non active';
+      }
+      html .= '<div class="row">
+          <div class="col-md-3">Title</div>
+          <div class="col-md-9">'.$review->title.'</div>
+      </div><div class="row">
+          <div class="col-md-3">Comment</div>
+          <div class="col-md-9">'.$review->review.'</div>
+      </div><div class="row">
+          <div class="col-md-3">Location</div>
+          <div class="col-md-9">'.$review->location.'</div>
+      </div><div class="row">
+          <div class="col-md-3">Email</div>
+          <div class="col-md-9">'.$review->email.'</div>
+      </div><div class="row">
+          <div class="col-md-3">Overall Rating</div>
+          <div class="col-md-9">'.$review->vote.'<icon class="fa fa-star"></i></div>
+      </div><div class="row">
+          <div class="col-md-3">Quality Rating</div>
+          <div class="col-md-9">'.$review->quality_vote.'<icon class="fa fa-star"></i></div>
+      </div><div class="row">
+          <div class="col-md-3">Performance Rating</div>
+          <div class="col-md-9">'.$review->performance_vote.'<icon class="fa fa-star"></i></div>
+      </div><div class="row">
+          <div class="col-md-3">Features Rating</div>
+          <div class="col-md-9">'.$review->features_vote.'<icon class="fa fa-star"></i></div>
+          </div><div class="row">
+              <div class="col-md-3">Recommeds</div>
+              <div class="col-md-9">'.$review->recommend.'<icon class="fa fa-star"></i></div>
+              </div><div class="row">
+                  <div class="col-md-3">Status</div>
+                  <div class="col-md-9">'.$status.'<icon class="fa fa-star"></i></div>
+                  </div><div class="row">
+                      <div class="col-md-3">Helpful</div>
+                      <div class="col-md-9">'.$review->helpful.'<icon class="fa fa-star"></i></div>
+                      </div><div class="row">
+                          <div class="col-md-3">Non Helpful</div>
+                          <div class="col-md-9">'.$review->nohelpful.'<icon class="fa fa-star"></i></div>
+                          </div><div class="row">
+                              <div class="col-md-3">Created at</div>
+                              <div class="col-md-9">'.date('d M f',strtotime($review->created_at)).'<icon class="fa fa-star"></i></div>
+                              </div>';
+
+            $json['html'] =  $html;
+            echo json_encode($json);                   
+
+
+
 
 
 

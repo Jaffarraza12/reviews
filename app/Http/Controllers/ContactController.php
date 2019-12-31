@@ -88,37 +88,7 @@ class ContactController extends Controller
 
     }
 
-    public function WARRANTYHTMLBLOCK(Request $request){
-      $html = '';
-      $status = '';
-      $warranty = Warranty::where('id',$request->id)->first();
-
-      $html .= '<div class="row">
-          <div class="col-md-3">Name</div>
-          <div class="col-md-9">'.$warranty->full_name.'</div>
-      </div><div class="row">
-          <div class="col-md-3">Email</div>
-          <div class="col-md-9">'.$warranty->email.'</div>
-      </div><div class="row">
-          <div class="col-md-3">Purchase</div>
-          <div class="col-md-9">'.$warranty->purchase_from.'</div>
-      </div><div class="row">
-          <div class="col-md-3">Message</div>
-          <div class="col-md-9">'.$warranty->comment.'</div>
-      </div><div class="row">
-          <div class="col-md-3">Sell price</div>
-          <div class="col-md-9">'.$warranty->sell_price.'</div>
-      </div><div class="row">
-          <div class="col-md-3">Created on</div>
-          <div class="col-md-9">'.date('d M Y',strtotime($contact->created_at)).'</div>
-      </div>';
-
-      $json['html'] =  $html;
-      echo json_encode($json);
-
-    }
-
-
+  
     public function RETAILERHTMLBLOCK(Request $request){
       $html = '';
       $status = '';

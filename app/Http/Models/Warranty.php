@@ -10,5 +10,5 @@ class Warranty extends Model
     protected $table = 'warranty';
     protected $connection = 'mysql';
     protected $primaryKey = 'id';
-    protected $fillable = ['first_name','last_name','full_name','email','purchase_from','sell_price','comment'];
+    protected $fillable = ['first_name','last_name','full_name','email','purchase_from','phone_number','sell_price','comment'];
 }

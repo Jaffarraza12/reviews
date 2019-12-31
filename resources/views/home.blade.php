@@ -202,7 +202,7 @@
                             <td>{{$ret->name }} </td>
                             <td>{{$ret->phone_number }} </td>
                             <td>{{$ret->email }} </td>
-                            <td><a class="pointer" title="View Retailer"  onclick="ViewPop('Retailer',{{$ret->id}},this)"><i class="fa fa-search"></i></a></td>
+                            <td><a class="pointer" title="View Retailer"  onclick="ViewPop('retailer',{{$ret->id}},this)"><i class="fa fa-search"></i></a></td>
 
                         </tr>
                       @endforeach

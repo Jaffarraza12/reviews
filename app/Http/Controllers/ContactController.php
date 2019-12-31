@@ -80,7 +80,7 @@ class ContactController extends Controller
           <div class="col-md-9">'.$warranty->sell_price.'</div>
       </div><div class="row">
           <div class="col-md-3">Created on</div>
-          <div class="col-md-9">'.date('d M Y',strtotime($contact->created_at)).'</div>
+          <div class="col-md-9">'.date('d M Y',strtotime($warranty->created_at)).'</div>
       </div>';
 
       $json['html'] =  $html;
@@ -88,7 +88,7 @@ class ContactController extends Controller
 
     }
 
-  
+
     public function RETAILERHTMLBLOCK(Request $request){
       $html = '';
       $status = '';

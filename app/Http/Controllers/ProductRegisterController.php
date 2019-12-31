@@ -47,9 +47,6 @@ class ProductRegisterController extends Controller
               <div class="col-md-3">Price</div>
               <div class="col-md-9">'.$pr->price.'</div>
           </div><div class="row">
-              <div class="col-md-3">Price</div>
-              <div class="col-md-9">'.$pr->price.'</div>
-          </div><div class="row">
               <div class="col-md-3">Model</div>
               <div class="col-md-9">'.$pr->model.'</div>
           </div><div class="row">

@@ -6,8 +6,8 @@ error_reporting(0);
 
 if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     $post = json_decode(file_get_contents('php://input'), true);
-    if($post['purchase_from']){
-      $post['purchase_from'] = date('Y-m-d h:i:s',strtotime($post['purchase_from']));
+    if($post['purchase_date']){
+      $post['purchase_date'] = date('Y-m-d h:i:s',strtotime($post['purchase_date']));
     }
     $qryString = '';
     foreach($post as $key => $val){

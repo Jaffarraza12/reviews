@@ -140,7 +140,7 @@
                        <td>{{$warranty->first_name .' '.$warranty->last_name}}</td>
                        <td>{{$warranty->email}} </td>
                        <td>{{$warranty->purchase_from}}</td>
-                       <td><a class="pointer" title="View Warranty Info" onclick="ViewPop('Warranty Claim',{{$warranty->id}},this)"><i class="fa fa-search"></i></a></td>
+                       <td><a class="pointer" title="View Warranty Info" onclick="ViewPop('warranty',{{$warranty->id}},this)"><i class="fa fa-search"></i></a></td>
 
                    </tr>
                    @endforeach

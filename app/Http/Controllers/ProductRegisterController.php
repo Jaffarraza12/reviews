@@ -26,7 +26,7 @@ class ProductRegisterController extends Controller
               <div class="col-md-3">Email</div>
               <div class="col-md-9">'.$pr->email.'</div>
           </div><div class="row">
-              <div class="col-md-3">Phone Number</div>
+              <div class="col-md-3">Phone</div>
               <div class="col-md-9">'.$pr->phone_number.'</div>
           </div><div class="row">
               <div class="col-md-3">Country</div>

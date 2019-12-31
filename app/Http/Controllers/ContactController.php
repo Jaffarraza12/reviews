@@ -40,7 +40,7 @@ class ContactController extends Controller
           <div class="col-md-3">Email</div>
           <div class="col-md-9">'.$contact->email.'</div>
       </div><div class="row">
-          <div class="col-md-3">Phone Number</div>
+          <div class="col-md-3">Phone </div>
           <div class="col-md-9">'.$contact->phone_number.'</div>
       </div><div class="row">
           <div class="col-md-3">Message</div>

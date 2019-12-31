@@ -78,7 +78,7 @@
                               <input onclick="ChangeStatus('question',{{$question->id}},this)" type="checkbox" @if($question->status ) checked @endif />
                               <span class="slider round"></span>
                             </label></td>
-                          <td><a class="pointer" title="View Review" onclick="ViewPop('question',{{$question->id}},this)"><i class="fa fa-search"></i></a></td>
+                          <td><a class="pointer" title="View Question" onclick="ViewPop('question',{{$question->id}},this)"><i class="fa fa-search"></i></a></td>
 
                       </tr>
                   @endforeach
@@ -112,7 +112,7 @@
                          <td>{{$cont->email}} </td>
                          <td>{{$cont->phone_number}}</td>
                          <td>{{date('M d y',strtotime($cont->created_at))}}</td>
-                         <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                         <td><a class="pointer" title="View Contact" onclick="ViewPop('contact',{{$cont->id}},this)"><i class="fa fa-search"></i></a></td>
 
                      </tr>
                      @endforeach
@@ -140,7 +140,7 @@
                        <td>{{$warranty->first_name .' '.$warranty->last_name}}</td>
                        <td>{{$warranty->email}} </td>
                        <td>{{$warranty->purchase_from}}</td>
-                       <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                       <td><a class="pointer" title="View Warranty Info" onclick="ViewPop('Warranty Claim',{{$warranty->id}},this)"><i class="fa fa-search"></i></a></td>
 
                    </tr>
                    @endforeach
@@ -175,7 +175,7 @@
                             <td>{{$complain->name }}</td>
                             <td>{{$complain->order}} </td>
                             <td>{{$complain->type}}</td>
-                            <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
+                            <td><a class="pointer" title="View Review"  onclick="ViewPop('complain',{{$complain->id}},this)"><i class="fa fa-search"></i></a></td>
 
                         </tr>
                         @endforeach
@@ -194,6 +194,7 @@
                           <th>Name</th>
                           <th>Phone</th>
                           <th>Email</th>
+                          <th></th>
                       </tr>
                       @foreach($retailer as $ret)
                           <tr>
@@ -201,6 +202,8 @@
                             <td>{{$ret->name }} </td>
                             <td>{{$ret->phone_number }} </td>
                             <td>{{$ret->email }} </td>
+                            <td><a class="pointer" title="View Retailer"  onclick="ViewPop('Retailer',{{$ret->id}},this)"><i class="fa fa-search"></i></a></td>
+
                         </tr>
                       @endforeach
 
@@ -237,8 +240,8 @@
                              <td>{{$product->email}} </td>
                              <td>{{$product->model}}</td>
                              <td>{{$product->price}}</td>
-                             <td><a class="pointer" title="View Review" data-toggle="modal" data-target="#viewReview"><i class="fa fa-search"></i></a></td>
-                          </tr>
+                             <td><a class="pointer" title="View Product Register"  onclick="ViewPop('Product Register',{{$ret->id}},this)"><i class="fa fa-search"></i></a></td>
+      </tr>
                          @endforeach
 
                    </table>
@@ -301,6 +304,16 @@ function ViewPop(type,id,elem){
     path = "/public/review/html/"+id
   } else if(type=='question'){
     path = "/public/question/html/"+id
+  } else if(type=='complain'){
+    path = "/public/complain/html/"+id
+  } else if(type=='contact'){
+    path = "/public/contact/html/"+id
+  } else if(type=='warranty'){
+    path = "/public/warranty/html/"+id
+  } else if(type=='retailer'){
+    path = "/public/retailer/html/"+id
+  } else if(type=='Product Register'){
+    path = "/public/product-register/html/"+id
   }
    $.ajax({
    url: path,

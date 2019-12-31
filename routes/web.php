@@ -23,3 +23,8 @@ Route::post('login', 'Auth\LoginController@login');
 Route::get('home', 'HomeController@index');
 Route::get('review/html/{id}', 'ReviewsController@HTMLBLOCK');
 Route::get('question/html/{id}', 'QuestionController@HTMLBLOCK');
+Route::get('complain/html/{id}', 'ComplainController@HTMLBLOCK');
+Route::get('contact/html/{id}', 'ContactController@HTMLBLOCK');
+Route::get('warranty/html/{id}', 'ContactController@WARRANTYHTMLBLOCK');
+Route::get('retailer/html/{id}', 'ContactController@RETAILERHTMLBLOCK');
+Route::get('product-register/html/{id}', 'ProductRegisterController@HTMLBLOCK');

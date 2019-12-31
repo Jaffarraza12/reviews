@@ -110,8 +110,8 @@ class ContactController extends Controller
           <div class="col-md-3">Website</div>
           <div class="col-md-9">'.$retailer->website.'</div>
       </div><div class="row">
-          <div class="col-md-3">By From </div>
-          <div class="col-md-9">'.$retailer->website.'</div>
+          <div class="col-md-3">Sell </div>
+          <div class="col-md-9">'.$retailer->sell.'</div>
       </div><div class="row">
           <div class="col-md-3">Message</div>
           <div class="col-md-9">'.$retailer->message.'</div>

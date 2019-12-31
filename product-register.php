@@ -6,7 +6,6 @@ error_reporting(0);
 
 if($_SERVER['REQUEST_METHOD']==='POST') {  // REQUIRE POST OR DIE
     $post = json_decode(file_get_contents('php://input'), true);
-
     if($post['purchase_date']){
       $post['purchase_date'] = date('Y-m-d h:i:s',strtotime($post['purchase_date']));
     }

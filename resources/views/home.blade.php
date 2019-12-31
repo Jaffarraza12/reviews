@@ -240,7 +240,7 @@
                              <td>{{$product->email}} </td>
                              <td>{{$product->model}}</td>
                              <td>{{$product->price}}</td>
-                             <td><a class="pointer" title="View Product Register"  onclick="ViewPop('Product Register',{{$ret->id}},this)"><i class="fa fa-search"></i></a></td>
+                             <td><a class="pointer" title="View Product Register"  onclick="ViewPop('Product Register',{{$product->id}},this)"><i class="fa fa-search"></i></a></td>
       </tr>
                          @endforeach
 

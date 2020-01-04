@@ -34,7 +34,7 @@
               </div>
           </div>
         </div>
-        {{example-component}}
+         <example-component></example-component>
 </div>
 
 <div class="modal fade" id="viewReview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

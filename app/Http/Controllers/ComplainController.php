@@ -40,4 +40,11 @@ class ComplainController extends Controller
       echo json_encode($json);
 
     }
+
+
+    public function loadAll(){
+      $complains = Complain::paginate(15);
+      return view('complain.view',compact('complains'));
+
+    }
 }

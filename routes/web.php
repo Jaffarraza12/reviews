@@ -28,3 +28,7 @@ Route::get('contact/html/{id}', 'ContactController@HTMLBLOCK');
 Route::get('warranty/html/{id}', 'ContactController@WARRANTYHTMLBLOCK');
 Route::get('retailer/html/{id}', 'ContactController@RETAILERHTMLBLOCK');
 Route::get('product-register/html/{id}', 'ProductRegisterController@HTMLBLOCK');
+
+
+
+Route::get('complain/all', 'ComplainController@loadAll');

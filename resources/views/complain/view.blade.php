@@ -2,10 +2,9 @@
 
 @section('content')
 <div  id="Rapp" class="container">
-    <div class="row justify-content-center">
-      <div class="form-control">
-        <input type="text" class="form-controls"/>
-      </div>
+   <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
     </div>
     <div class="row justify-content-center">
         <div class="col">

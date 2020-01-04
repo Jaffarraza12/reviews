@@ -3,6 +3,11 @@
 @section('content')
 <div  id="Rapp" class="container">
     <div class="row justify-content-center">
+      <div class="form-control">
+        <input type="text" class="form-controls"/>
+      </div>
+    </div>
+    <div class="row justify-content-center">
         <div class="col">
             <div class="card">
                 <div class="card-header">Complain Box</div>

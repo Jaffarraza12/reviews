@@ -160,5 +160,61 @@ input:checked + .slider:before {
 
 
 
+
+    <script>
+    function ChangeStatus(type,id,elem){
+      sta= 0
+      path = ''
+      if($(elem).is(':checked')){sta =1} else {sta =0}
+      if(type=='review'){
+        path = "/public/api/review/"+id
+      } else if(type=='question'){
+        path = "/public/api/question/"+id
+      }
+      $.ajax({
+      url: path,
+      method: "POST",
+      data: { 'status': sta,'id':id,'_method':'PUT' }
+    }).done(function() {
+      $( this ).addClass( "done" );
+    });
+
+
+    }
+
+    function ViewPop(type,id,elem){
+      path = ''
+      if(type=='review'){
+        path = "/public/review/html/"+id
+      } else if(type=='question'){
+        path = "/public/question/html/"+id
+      } else if(type=='complain'){
+        path = "/public/complain/html/"+id
+      } else if(type=='contact'){
+        path = "/public/contact/html/"+id
+      } else if(type=='warranty'){
+        path = "/public/warranty/html/"+id
+      } else if(type=='retailer'){
+        path = "/public/retailer/html/"+id
+      } else if(type=='Product Register'){
+        path = "/public/product-register/html/"+id
+      }
+       $.ajax({
+       url: path,
+       method: "GET",
+       data: { 'id':id,'_method':'GET' }
+     }).done(function(resp) {
+       rep = $.parseJSON(resp)
+       $('.modal-body').html(rep.html)
+       $('#exampleModalLabel').html(type.toUpperCase())
+       $('#viewReview').modal('show')
+
+     })
+
+
+    }
+
+    </script>
+
 </body>
 </html>

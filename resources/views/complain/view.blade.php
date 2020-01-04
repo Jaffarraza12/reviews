@@ -46,7 +46,7 @@
                         @endforeach
 
                   </table>
-                  <div class="width:400px;margin:auto;text-align:center;">{{($complains->links()  }}</div>
+                  <div class="width:400px;margin:auto;text-align:center;">{{$complains->links()  }}</div>
                 </div>
               </div>
           </div>

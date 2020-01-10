@@ -19,9 +19,9 @@ class ProductRegisterController extends Controller
           });
       }
       if($request->name <> ""){
-          $products = ProductRegister::where('name','like','%'.$request->name.'%')->paginate($per_page);
+          $products = ProductRegister::where('name','like','%'.$request->name.'%')->orderby('id','desc')->paginate($per_page);
         } else {
-          $products = ProductRegister::paginate($per_page);
+          $products = ProductRegister::orderby('id','desc')->paginate($per_page);
         }
         return response()->json($products, 200);
     }

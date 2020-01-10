@@ -4,10 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Models\Complain;
+use Illuminate\Pagination\Paginator;
 
 class ComplainController extends Controller
 {
     //
+
+    public function index(Request $request)
+    {
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $complain = Complain::where('name','like','%'.$request->name.'%')->paginate($per_page);
+        } else {
+          $complain = Complain::paginate($per_page);
+        }
+        return response()->json($complain, 200);
+    }
     public function store(Request $request)
     {
         $complain = Complain::create($request->all());
@@ -43,7 +61,6 @@ class ComplainController extends Controller
 
 
     public function loadAll(){
-      $complains = Complain::paginate(15);
       return view('complain.view',compact('complains'));
 
     }

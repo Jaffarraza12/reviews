@@ -7,9 +7,29 @@ use App\Http\Models\Contact;
 use App\Http\Models\Warranty;
 use App\Http\Models\Retailer;
 
+use Illuminate\Pagination\Paginator;
+
 class ContactController extends Controller
 {
     //
+
+    public function index(Request $request)
+    {
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $contact = Contact::where('name','like','%'.$request->name.'%')->paginate($per_page);
+        } else {
+          $contact = Contact::paginate($per_page);
+        }
+        return response()->json($contact, 200);
+    }
+
     public function store(Request $request)
     {
         $contact = Contact::create($request->all());
@@ -123,6 +143,39 @@ class ContactController extends Controller
       $json['html'] =  $html;
       echo json_encode($json);
 
+    }
+    public function WarrantiesListing(Request $request)
+    {
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $warranty = Warranty::where('name','like','%'.$request->name.'%')->OrderBy('id','desc')->paginate($per_page);
+        } else {
+          $warranty = Warranty::OrderBy('id','desc')->paginate($per_page);
+        }
+        return response()->json($warranty, 200);
+    }
+
+    public function RetailerListing(Request $request)
+    {
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $retailer = Retailer::where('name','like','%'.$request->name.'%')->OrderBy('id','desc')->paginate($per_page);
+        } else {
+          $retailer = Retailer::OrderBy('id','desc')->paginate($per_page);
+        }
+        return response()->json($retailer, 200);
     }
 
 }

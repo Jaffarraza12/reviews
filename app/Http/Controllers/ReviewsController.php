@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 use App\Http\Models\Review;
 
 class ReviewsController extends Controller
@@ -173,12 +174,22 @@ class ReviewsController extends Controller
 
             $json['html'] =  $html;
             echo json_encode($json);
+    }
 
-
-
-
-
-
+    function GetAllReviews(Request $request){
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $reviews = Review::where('name','like','%'.$request->name.'%')->Orderby('id','desc')->paginate($per_page);
+        } else {
+          $reviews = Review::Orderby('id','desc')->paginate($per_page);
+        }
+        return response()->json($reviews, 200);
 
     }
 }

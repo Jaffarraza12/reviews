@@ -4,7 +4,7 @@
     <a href="{{url('/home')}}" class="btn btn-light">BACK</a>
     <div class="row justify-content-center">
         <div class="col">
-          <complain-component></complain-component>
+          <product-component></product-component>
           </div>
       </div>
 </div>

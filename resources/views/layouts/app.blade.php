@@ -9,16 +9,13 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
       <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset(mix('css/app.css')) }}" rel="stylesheet">
     <style>
     @media only screen and (max-width: 720px)  {
 
@@ -92,6 +89,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.btn-primary{margin: auto;text-align: center;width: 100px;display: block;}
 
 
     </style>
@@ -154,12 +152,49 @@ input:checked + .slider:before {
             @yield('content')
         </main>
     </div>
+    <div class="modal fade" id="viewReview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Scripts -->
+        <script src="{{ asset(mix('js/app.js')) }}" defer></script>
+
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+
     <script>
+    $(function(){
+      setTimeout(function(){
+        $('.OpenPop').click(function(){
+            type = $(this).data('type')
+            id = $(this).data('id')
+            elem = $(this)
+            ViewPop(type,id,elem)
+        })
+
+        $('.checker').click(function(){
+            type = $(this).data('type')
+            id = $(this).data('id')
+            elem = $(this)
+            ChangeStatus(type,id,elem)
+        })
+      },1400)
+
+    })
     function ChangeStatus(type,id,elem){
       sta= 0
       path = ''
@@ -170,7 +205,7 @@ input:checked + .slider:before {
         path = "/public/api/question/"+id
       }
       $.ajax({
-      url: path,
+      url:path,
       method: "POST",
       data: { 'status': sta,'id':id,'_method':'PUT' }
     }).done(function() {
@@ -197,6 +232,7 @@ input:checked + .slider:before {
       } else if(type=='Product Register'){
         path = "/public/product-register/html/"+id
       }
+
        $.ajax({
        url: path,
        method: "GET",

@@ -13,17 +13,14 @@ class QuestionController extends Controller
     {
         $question = array();
         $filter = array();
-        $ques = Question:: select("question.*",DB::raw("(SELECT COUNT(*) FROM answer WHERE question = question.id) AS answer_count"))
-            ->where('status',1);
-        if(isset($request->product)){
-            $ques->where('product','=',$request->product);
-            $filter['product'] =$request->product;
+        $per_page = 15;
+        $questions = Question::select('question.*',DB::raw('( SELECT count(*) FROM `answer` WHERE question = question.id ) as answerCount'));
+
+        if($request->name <> ""){
+          $questions =  $questions->where('name','like','%'.$request->name.'%');
         }
-        $question['questions'] = $ques->orderBy('id','desc')->get();
-        foreach($question['questions']  as $q):
-            $question['answers'][$q->id] = Answer::where('question',$q->id)->where('status',1)->get();
-        endforeach;
-        return response()->json($question,200);
+        $questions = $questions->orderBy('id','DESC')->paginate($per_page);
+        return response()->json($questions,200);
     }
     public function store(Request $request)
     {
@@ -37,11 +34,11 @@ class QuestionController extends Controller
     }
     public function update(Request $request)
     {
-        $req = array(      'status' => $request->status);
+        $req = array(  'status' => $request->status);
 
-        Question::where('id',$request->id )->update($req);
+        $question = Question::where('id',$request->id )->update($req);
 
-        return response()->json($review, 200);
+        return response()->json($question, 200);
     }
     public function HTMLBLOCK(Request $request){
       $html = '';
@@ -87,6 +84,22 @@ class QuestionController extends Controller
 
     }
 
+    function GetAllQuestions(Request $request){
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $reviews = Review::where('name','like','%'.$request->name.'%')->Orderby('id','desc')->paginate($per_page);
+        } else {
+          $reviews = Review::Orderby('id','desc')->paginate($per_page);
+        }
+        return response()->json($reviews, 200);
+
+    }
 
 
 }

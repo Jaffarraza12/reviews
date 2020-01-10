@@ -32,3 +32,22 @@ Route::get('product-register/html/{id}', 'ProductRegisterController@HTMLBLOCK');
 
 
 Route::get('complain/all', 'ComplainController@loadAll');
+Route::get('contacts/all',function(){
+  return view('contact.view');
+});
+Route::get('products/all',function(){
+  return view('product.view');
+});
+
+Route::get('warranties/all',function(){
+  return view('warranty.view');
+});
+Route::get('retailers/all',function(){
+  return view('retailer.view');
+});
+Route::get('reviews/all',function(){
+  return view('review.view');
+});
+Route::get('questions/all',function(){
+  return view('questions.view');
+});

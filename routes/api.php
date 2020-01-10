@@ -38,3 +38,12 @@ Route::post('warranty', 'ContactController@warranty');
 Route::post('retailer', 'ContactController@retailer');
 Route::post('complain', 'ComplainController@store');
 Route::post('product-register', 'ProductRegisterController@store');
+
+
+Route::get('complains', 'ComplainController@index');
+Route::get('contacts', 'ContactController@index');
+Route::get('products', 'ProductRegisterController@index');
+Route::get('warranties', 'ContactController@WarrantiesListing');
+Route::get('retailers', 'ContactController@RetailerListing');
+Route::get('reviews', 'ReviewsController@GetAllReviews');
+Route::get('questions', 'QuestionController@index');

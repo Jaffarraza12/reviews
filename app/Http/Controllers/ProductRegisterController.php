@@ -4,10 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Models\ProductRegister;
+use Illuminate\Pagination\Paginator;
 
 class ProductRegisterController extends Controller
 {
     //
+    public function index(Request $request)
+    {
+      $per_page = 15;
+      if($request->page <> null) {
+          $currentPage =  $request->page;
+          Paginator::currentPageResolver(function () use ($currentPage) {
+              return $currentPage;
+          });
+      }
+      if($request->name <> ""){
+          $products = ProductRegister::where('name','like','%'.$request->name.'%')->paginate($per_page);
+        } else {
+          $products = ProductRegister::paginate($per_page);
+        }
+        return response()->json($products, 200);
+    }
+
     public function store(Request $request)
     {
         $pr= ProductRegister::create($request->all());

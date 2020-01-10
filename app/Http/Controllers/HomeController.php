@@ -34,13 +34,13 @@ class HomeController extends Controller
     public function index()
     {
 
-        $reviews = Review::orderBy('created_at','DESC')->limit(10)->get();
-        $questions = Question::select('question.*',DB::raw('( SELECT count(*) FROM `answer` WHERE question = question.id ) as answerCount'))->orderBy('created_at','DESC')->get();
-        $contacts= Contact::orderBy('created_at','DESC')->limit(10)->get();
-        $warranties = Warranty::orderBy('created_at','DESC')->limit(10)->get();
-        $complains =  Complain::orderBy('created_at','DESC')->limit(10)->get();
-        $retailer = Retailer::orderBy('created_at','DESC')->limit(10)->get();
-        $products = ProductRegister::orderBy('created_at','DESC')->limit(10)->get();
+        $reviews = Review::orderBy('id','DESC')->limit(5)->get();
+        $questions = Question::select('question.*',DB::raw('( SELECT count(*) FROM `answer` WHERE question = question.id ) as answerCount'))->orderBy('id','DESC')->get();
+        $contacts= Contact::orderBy('id','DESC')->limit(5)->get();
+        $warranties = Warranty::orderBy('id','DESC')->limit(5)->get();
+        $complains =  Complain::orderBy('id','DESC')->limit(5)->get();
+        $retailer = Retailer::orderBy('id','DESC')->limit(5)->get();
+        $products = ProductRegister::orderBy('id','DESC')->limit(5)->get();
         return view('home',compact('reviews','questions','contacts','warranties','complains','retailer','products'));
     }
 }

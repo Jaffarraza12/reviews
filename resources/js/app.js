@@ -19,8 +19,15 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+Vue.component('review-component', require('./components/ReviewComponent.vue').default);
+Vue.component('question-component', require('./components/QuestionComponent.vue').default);
+Vue.component('complain-component', require('./components/ComplainComponent.vue').default);
+Vue.component('product-component', require('./components/ProductComponent.vue').default);
+Vue.component('warranty-component', require('./components/WarrantyComponent.vue').default);
+Vue.component('retailer-component', require('./components/RetailerComponent.vue').default);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('complain', require('./components/complain.vue').default);
+Vue.component('contact-component', require('./components/ContactComponent.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

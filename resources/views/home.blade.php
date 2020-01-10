@@ -47,10 +47,11 @@
                             <input onclick="ChangeStatus('review',{{$rev->id}},this)" type="checkbox" @if($rev->status ) checked @endif />
                             <span class="slider round"></span>
                           </label></td>
-                        <td><a class="pointer" title="View Review" onclick="ViewPop('review',{{$rev->id}},this)"><i class="fa fa-search"></i></a></td>
+                        <td><a class="pointer" title="View Review" onclick="ViewPop('review',{{$rev->id}},this)"><i class="fa fa-eye"></i></a></td>
                     </tr>
                     @endforeach
                 </table>
+                <a class="btn btn-primary" href="{{url('reviews/all')}}">LOAD ALL</a>
 
             </div>
 
@@ -78,11 +79,13 @@
                               <input onclick="ChangeStatus('question',{{$question->id}},this)" type="checkbox" @if($question->status ) checked @endif />
                               <span class="slider round"></span>
                             </label></td>
-                          <td><a class="pointer" title="View Question" onclick="ViewPop('question',{{$question->id}},this)"><i class="fa fa-search"></i></a></td>
+                          <td><a class="pointer" title="View Question" onclick="ViewPop('question',{{$question->id}},this)"><i class="fa fa-eye"></i></a></td>
 
                       </tr>
                   @endforeach
                 </table>
+                <a class="btn btn-primary" href="{{url('questions/all')}}">LOAD ALL</a>
+
             </div>
         </div>
     </div>
@@ -112,12 +115,14 @@
                          <td>{{$cont->email}} </td>
                          <td>{{$cont->phone_number}}</td>
                          <td>{{date('M d y',strtotime($cont->created_at))}}</td>
-                         <td><a class="pointer" title="View Contact" onclick="ViewPop('contact',{{$cont->id}},this)"><i class="fa fa-search"></i></a></td>
+                         <td><a class="pointer" title="View Contact" onclick="ViewPop('contact',{{$cont->id}},this)"><i class="fa fa-eye"></i></a></td>
 
                      </tr>
                      @endforeach
 
                </table>
+               <a class="btn btn-primary" href="{{url('contacts/all')}}">LOAD ALL</a>
+
              </div>
        </div>
 
@@ -140,12 +145,14 @@
                        <td>{{$warranty->first_name .' '.$warranty->last_name}}</td>
                        <td>{{$warranty->email}} </td>
                        <td>{{$warranty->purchase_from}}</td>
-                       <td><a class="pointer" title="View Warranty Info" onclick="ViewPop('warranty',{{$warranty->id}},this)"><i class="fa fa-search"></i></a></td>
+                       <td><a class="pointer" title="View Warranty Info" onclick="ViewPop('warranty',{{$warranty->id}},this)"><i class="fa fa-eye"></i></a></td>
 
                    </tr>
                    @endforeach
 
              </table>
+             <a class="btn btn-primary" href="{{url('warranties/all')}}">LOAD ALL</a>
+
            </div>
      </div>
 
@@ -175,12 +182,14 @@
                             <td>{{$complain->name }}</td>
                             <td>{{$complain->order}} </td>
                             <td>{{$complain->type}}</td>
-                            <td><a class="pointer" title="View Review"  onclick="ViewPop('complain',{{$complain->id}},this)"><i class="fa fa-search"></i></a></td>
+                            <td><a class="pointer" title="View Review"  onclick="ViewPop('complain',{{$complain->id}},this)"><i class="fa fa-eye"></i></a></td>
 
                         </tr>
                         @endforeach
 
                   </table>
+                    <a class="btn btn-primary" href="{{url('complain/all')}}">LOAD ALL</a>
+
                 </div>
               </div>
           </div>
@@ -202,12 +211,14 @@
                             <td>{{$ret->name }} </td>
                             <td>{{$ret->phone_number }} </td>
                             <td>{{$ret->email }} </td>
-                            <td><a class="pointer" title="View Retailer"  onclick="ViewPop('retailer',{{$ret->id}},this)"><i class="fa fa-search"></i></a></td>
+                            <td><a class="pointer" title="View Retailer"  onclick="ViewPop('retailer',{{$ret->id}},this)"><i class="fa fa-eye"></i></a></td>
 
                         </tr>
                       @endforeach
 
                   </table>
+
+                    <a class="btn btn-primary" href="{{url('retailers/all')}}">LOAD ALL</a>
                 </div>
               </div>
 
@@ -240,11 +251,12 @@
                              <td>{{$product->email}} </td>
                              <td>{{$product->model}}</td>
                              <td>{{$product->price}}</td>
-                             <td><a class="pointer" title="View Product Register"  onclick="ViewPop('Product Register',{{$product->id}},this)"><i class="fa fa-search"></i></a></td>
-      </tr>
-                         @endforeach
+                             <td><a class="pointer" title="View Product Register"  onclick="ViewPop('Product Register',{{$product->id}},this)"><i class="fa fa-eye"></i></a></td>
+                      </tr>
+                      @endforeach
+                    </table>
+                    <a class="btn btn-primary" href="{{url('products/all')}}">LOAD ALL</a>
 
-                   </table>
                  </div>
                </div>
 

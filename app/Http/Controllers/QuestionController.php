@@ -22,8 +22,22 @@ class QuestionController extends Controller
         $questions = $questions->orderBy('id','DESC')->paginate($per_page);
         return response()->json($questions,200);
     }
+
+    public function api(Request $request)
+    {
+        $question = array();
+        $filter = array();
+        $questions = Question::select('question.*',DB::raw('( SELECT count(*) FROM `answer` WHERE question = question.id ) as answerCount'));
+        if($request->product){
+            $questions = $questions->where('product',$request->product)
+        }
+        $questions = $questions->orderBy('id','DESC')->get();
+        return response()->json($questions,200);
+    }
     public function store(Request $request)
     {
+
+
         $question = Question::create($request->all());
         return response()->json($question, 200);
     }

@@ -10,6 +10,6 @@ class Question extends Model
     protected $table = 'question';
     protected $connection = 'mysql';
     protected $primaryKey = 'id';
-    protected $fillable = ['question','name','email'];
+    protected $fillable = ['question','name','email','product'];
 
 }

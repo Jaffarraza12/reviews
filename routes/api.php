@@ -30,7 +30,7 @@ Route::put('question/{id}', 'QuestionController@update');
 
 
 
-Route::get('question', 'QuestionController@index');
+Route::get('question', 'QuestionController@api');
 Route::post('question', 'QuestionController@store');
 Route::post('answer', 'QuestionController@Anstore');
 Route::post('contact', 'ContactController@store');

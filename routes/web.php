@@ -14,12 +14,10 @@
 
 
 Auth::routes();
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::post('register', 'Auth\RegisterController@register');
 Route::post('login', 'Auth\LoginController@login');
+Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('review/html/{id}', 'ReviewsController@HTMLBLOCK');
 Route::get('question/html/{id}', 'QuestionController@HTMLBLOCK');
